@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="QuanTri.master.cs" Inherits="QuanTri" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <%--SOURCE http://startbootstrap.com/template-overviews/simple-sidebar/--%>
+ <%--GITHUB URL https://github.com/IronSummitMedia/startbootstrap-simple-sidebar--%>
+ <title>Simple ASP.NET Sidebar</title>
+ <!-- Bootstrap Core CSS -->
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <!-- Custom CSS -->
+ <link href="simple-sidebar.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+ <form id="form1" runat="server">
+ <div id="wrapper">
+ <!-- Sidebar -->
+ <div id="sidebar-wrapper">
+ <ul class="sidebar-nav">
+ <br />
+ <li class="sidebar-brand"><a href="#">Admin Page</a></li>
+ <li><a href="Music.aspx"><span class="glyphicon glyphicon-music"></span>&nbsp;&nbsp;Tài khoản người dùng</a>
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Danh mục hàng</a>
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Sản phẩm</a>
+ </li>
+ <%--<li><a href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete it!</a>
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-cloud"></span>&nbsp;&nbsp;Cloud</a>
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Refresh</a>
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-print"></span>&nbsp;&nbsp;Printing</a>
+ </li>--%>
+ <li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;Logout !!!!</a>
+ </li>
+ </ul>
+ </div>
+     <asp:ContentPlaceHolder ID="Main" runat="server"></asp:ContentPlaceHolder>
+ </div>
+ <%--This is a modified Page by Parallelcodes.com. To view the original style-sheet and original post please visit : 
+SOURCE http://startbootstrap.com/template-overviews/simple-sidebar
+GITHUB URL https://github.com/IronSummitMedia/startbootstrap-simple-sidebar
+ --%>
+
+ <script src="js/jquery.js"></script>
+
+ <script src="js/bootstrap.min.js"></script>
+
+ <script>
+     $("#menu-toggle").click(function (e) {
+         e.preventDefault();
+         $("#wrapper").toggleClass("toggled");
+     });
+ </script>
+
+ </form>
+</body>
+</html>
