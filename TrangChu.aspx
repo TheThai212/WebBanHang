@@ -1,6 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="TrangChu.aspx.cs" Inherits="TrangChu" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" Runat="Server"> <!-- Chèn CSS, JS -->
+
+
+    <script>
+        
+        $('.quick-view').click(function () {
+                console.log('ok');
+
+            });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
         <!-- Slider section --> 
@@ -329,7 +338,7 @@
 											<div class="product__inside__image">
 												<a href="product.html"> <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("hinhanhsp") %>' /> </a> 
 												<!-- quick-view --> 
-												<a href="#" data-toggle="modal" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a> 
+												<a href="#" data-toggle="modal" data-id="<%# Eval("masp") %>" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a> 
 												<!-- /quick-view --> 
 											</div>
 											<!-- /product image --> 

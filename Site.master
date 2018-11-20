@@ -25,6 +25,7 @@
     <!-- Icon Fonts  -->
     <link rel="stylesheet" href="font/style.css">
     <!-- Head Libs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Modernizr -->
     <script src="external/modernizr/modernizr.js"></script>
     <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
