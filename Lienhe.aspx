@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="LienHe.aspx.cs" Inherits="Lienhe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.master" CodeFile="LienHe.aspx.cs" Inherits="LienHe" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" Runat="Server">
 </asp:Content>
@@ -96,14 +96,19 @@
                             <!-- /textarea -->
                             <!-- button -->
                             <div class="pull-right note">* Required Fields</div>
-                            <asp:Button ID="btnGui" runat="server" Text="Send Message" OnClick="btnGui_Click" />
+                            <asp:Button ID="btnGui" runat="server" Text="Send Message" OnClick="btnGui_Click1" />
+                            
+                            <asp:Label ID="Label1" runat="server" Text="abc"></asp:Label>
                             <%--<button class="btn btn--ys btn--xl btn-top" type="submit">Send message</button>--%>
                             <!-- /button -->
                         </div>						
 					</div>
-				</div>					
+				</div>	
+                <asp:Button ID="btnDemo" runat="server" Text="Demo" OnClick="btnDemo_Click" />	
+                <asp:Label ID="Label2" runat="server" Text="abc"></asp:Label>			
 			</section>
 		</div>
 		<!-- End CONTENT section -->
 </asp:Content>
+
 
