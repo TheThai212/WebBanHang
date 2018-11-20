@@ -1,0 +1,347 @@
+/*=== tabs ===*/
+
+@media (min-width: @screen-sm-min) {
+
+	.nav-tabs {
+		&--ys {
+		  border: 1px solid @nav-tabs-link-hover-border-color;
+		  background-color: #f5f5f5;
+		  > li {
+		  	@media (max-width:  @screen-xs-max) {
+			  float: none;
+			  display: block;
+			}
+			> a {
+			  border: 0;
+			  background-color: #f5f5f5;
+			  margin-right: 0;
+			  border-radius: 0;
+			  padding: 16px 28px 15px;
+			  border-right: 1px solid @nav-tabs-link-hover-border-color;
+			  border-bottom: 1px solid @nav-tabs-link-hover-border-color;
+			  color: @dark-text-color;
+			  text-transform: uppercase;
+			  font-weight: 500;
+
+			  &:hover {
+				border-color: @nav-tabs-link-hover-border-color;
+			  }
+			  @media (max-width:  @screen-xs-max) {
+				  border: 0;
+			  }			
+			}
+			&.active > a {
+			  &,
+			  &:hover,
+			  &:focus {
+				padding-bottom: 14px;
+				border: 0;
+				border-right: 1px solid @nav-tabs-link-hover-border-color;
+				color: @dark-text-color;
+				@media (max-width:  @screen-xs-max) {
+					border: 0;
+				}		  
+			  }
+				&:after {
+					background-color: @nav-tabs-active-link-bg;
+					height: 2px;
+					content: "";
+					position: absolute;
+					bottom: -2px;
+					left: 0;
+					right: 0;
+					@media (max-width:  @screen-xs-max) {
+						display: none;
+					}					
+			  }			
+			  &:before {
+					background-color: @custom-color;
+					height: 3px;
+					content: "";
+					position: absolute;
+					top: -1px;
+					left: 0;
+					right: 0;				
+			  }
+			}
+		  }
+		}
+		&--ys-center{
+			border:none; 
+			li{
+				display: inline-block;
+				float: inherit;
+				margin:0px 20px 20px 0 !important; 			
+				&.active > a {
+					 border-bottom:5px solid @custom-color !important;	
+					 color: @dark-text-color !important;	  
+				}
+				
+			}
+			a{
+				border:none !important; 
+				font-size: 24px;
+				padding: 0 0 18px 0 !important;
+				border-bottom:5px solid transparent !important;		
+				.transition();
+				&:hover{
+					color: @dark-text-color;
+					background: none !important;
+				}
+			}
+
+		}
+		&--ys-center1{
+			border-bottom:1px solid @border; 
+			li{
+				display: inline-block;
+				float: inherit;
+				margin:0px 20px !important; 			
+				&.active > a {
+					 border-bottom:3px solid @custom-color !important;		  
+				}
+				@media (max-width:  @screen-xs-max) {
+				  float: none;
+				  display: block;
+				  margin:10px 20px !important; 
+				}
+			}
+			a{
+				border:none !important; 
+				font-size: 16px;
+				font-weight: bold;
+				color: @dark-text-color;
+				padding: 0 !important;
+				border-bottom:3px solid transparent !important;		
+				.transition();
+				&:hover{
+					color: @dark-text-color;
+					background: none !important;
+				}
+			}
+
+		}
+	}
+
+}
+
+
+
+@media (max-width: 767px) {
+	.nav-tabs{
+		border-color: transparent !important;
+
+		li{
+			float: none !important;
+			text-align: center;
+			border-bottom:1px solid @border;
+			a{
+				border-color: transparent !important;
+				border-radius: 0;
+				font-weight: bold;
+				color: @color-dark;
+				
+				.transition(all, 300ms, linear, 0s);
+				&:hover{
+					background: none;
+					color: @custom-color;
+				} 
+			}
+			&.active{					
+				a{
+					background: @custom-color !important;
+					color: @color-white !important;
+					border-color: transparent!important;								
+				}
+			}
+			
+		}
+	}	
+}
+
+
+
+
+
+
+.tab-content {
+	&--ys {
+	  > .tab-pane {
+		display: none;
+		background-color: @nav-tabs-active-link-bg;
+		padding: 30px 40px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: @nav-tabs-link-hover-border-color;
+		border-top: 0;
+	    font-weight: 300;
+	  }
+	  > .active {
+		display: block;
+	  }
+	}
+	&--ys-center{
+		padding:50px 0 0 0;
+		text-align: center;
+		
+	}
+	&--ys-fullwidth {
+		border: none !important;
+		padding:50px 0 0 0;
+	  > .tab-pane {
+		display: none;
+		padding:0px 0px;
+		border-width: 1px;
+		border-top: 0;
+	    font-weight: 300;
+	  }
+	  > .active {
+		display: block;
+	  }
+	}
+	&--ys-center{
+		padding:50px 0 0 0;
+		text-align: center;
+		
+	}
+}
+
+/* flip tab */
+
+.tabs {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.25em;
+}
+
+.tabs nav {
+	text-align: center;
+}
+
+.tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.tabs nav a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.tabs nav a span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+	color: #74777b;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+.tabs-style-flip {
+	max-width: 1200px;
+}
+
+.tabs-style-flip nav a {
+	padding: 0.5em 0;
+	color: #2CC185;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.tabs-style-flip nav a:hover,
+.tabs-style-flip nav a:focus,
+.tabs-style-flip nav li.tab-current a {
+	color: #74777b;
+}
+
+.tabs-style-flip nav a span {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 0.625em;
+}
+
+.tabs-style-flip nav a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+	transition: transform 0.3s, background-color 0.3s;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,90deg);
+	transform: perspective(900px) rotate3d(1,0,0,90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+}
+
+.tabs-style-flip nav li.tab-current a::after {
+	background-color: #fff;
+	-webkit-transform: perspective(900px) rotate3d(1,0,0,0deg);
+	transform: perspective(900px) rotate3d(1,0,0,0deg);
+}
+
+.tabs-style-flip .content-wrap {
+	background: @color-white;
+}
+
+/*=== /tabs ===*/
+
+.open-tab{
+	display: block !important;	
+}
+
+
+
+
+
+
+
+
+
+

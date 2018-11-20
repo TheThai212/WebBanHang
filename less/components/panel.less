@@ -1,0 +1,93 @@
+.panel{	
+	.mdShadow(none);
+	.panel-heading{
+		position: relative;
+		border-top:1px solid @border;
+		padding: 0;
+		&__number{
+			width: 52px;
+			height: 52px;
+			background-color: @panel-number-bg;
+			text-align: center;
+			color: @panel-number-color;
+			font-size: 20px;
+			line-height: 2.55em;
+			position: absolute;
+			top: 20px;
+			left: 0;
+			.radius(50%);
+			.transition(background-color);
+		}
+		.panel-title{			
+			color: @dark-text-color;
+			font-size: 20px;		
+			&:after {
+				position: absolute;
+				display: block;
+				top: 34px;
+				right: 0px;
+				z-index: 0;
+				font-family: 'Material Icons';
+				font-size: 22px;
+				content: "\e148";
+				line-height: 1em;
+				color: @custom-color;				
+			}
+			a{
+				text-decoration: none !important;
+				display: block;
+				padding:@panel-title-padding;
+				position: relative;
+				z-index: 2;								
+			}
+			
+		}
+		&.active{
+			.panel-heading__number{
+				background-color:@panel-number-bg-act;
+				color: @panel-number-color-act;
+			}
+			.panel-title{
+				&:after{
+					content: "\e15d";				
+				} 
+
+			}
+		}		
+	}
+	.panel-body{
+		padding: 10px 0 28px 0;		
+	}
+	
+	
+	.panel-body,
+	.panel-collapse,
+	.panel-collapse > .list-group{
+		border:none !important; 
+	}
+	
+}
+/* link-functional */
+.link-functional{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 1em;		
+	font-weight: 500;	
+	.icon,
+	.fa{
+		font-size: 20px;
+		margin-right: 10px;
+		color: @custom-color;
+		position: relative;
+		top: 6px;				
+	}
+	color: @dark-text-color;
+	&:hover{
+		text-decoration: none;
+		color: @custom-color;
+	}
+}
+
+/* /link-functional */
+

@@ -1,0 +1,3 @@
+Font Awesome - https://fortawesome.github.io/Font-Awesome/icons/
+MaterialIcons - https://design.google.com/icons/
+fontello - http://fontello.com/

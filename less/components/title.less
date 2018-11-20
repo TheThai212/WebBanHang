@@ -1,0 +1,156 @@
+/****************************************
+* title 
+*****************************************/
+.title-box {
+	width: 100%;
+	overflow: hidden;
+}
+.title {
+	margin-top: @content-top-margin;
+	@media (max-width: 479px) {
+		margin-top: @content-top-margin*0.333;
+	}
+}
+
+
+/* title
+==================================== */
+h2.title-default{
+  margin-bottom: 0.9em;
+  padding:1.05em 0 0 0; 
+}
+h4.title-default{
+  margin-bottom: 2.4em;
+  padding:1.05em 0 0 0; 
+  font-size: 22px;
+  line-height: 1.2em;
+}
+/* end title
+==================================== */
+
+/* title-aside
+==================================== */
+.title-aside-wrapper{
+  background-color: @custom-color;
+  color: @color-white;
+  padding: 19px 21px 19px 20px;
+  margin: 0 !important;
+  font-size: 20px;
+}
+/* end title-aside
+==================================== */
+
+
+
+/* title-under
+==================================== */
+.fixed-bg .container{
+  position: relative;
+}
+.title-under {
+  position: relative;
+  margin-bottom: 2.667em;
+  &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 68px;
+      background: @custom-color;
+      bottom: -1em;
+  }
+  &.text-left:after  {
+     left: 0%;
+  }
+  &.text-center:after  {
+    left: 50%;
+    margin-left: -34px;
+  }
+  &.text-right:after {
+    right: 0%;
+  }
+  @media (max-width: 479px) {
+	font-size: 1.35em;
+	margin-bottom: 1em;
+	text-align: center !impoortant;
+	&.pull-left, &.pull-rigth {
+		float: none !important;
+		text-align: center !important;
+	}
+    &:after {
+		display: none;
+	}
+  }
+}
+h4.title-under {
+  &:after {
+      bottom: -1.2em;
+  }
+}
+.indent-bottom{
+  margin-bottom: 2.74em;
+}
+.title-under.title-md{
+  font-size: 2.9em;
+}
+.title-with-button{
+  position: relative;
+  overflow: hidden;
+}
+.title-xs {
+  font-style: 18px;
+}
+
+.title-with-button{
+  .title-under.text-center{
+    padding-right: 117px !important;
+     padding-left: 117px !important;
+     @media (max-width: @screen-xs-max) {
+        &{
+          padding-right: 0px !important;
+          padding-left: 0px !important;
+        }
+      }   
+  }
+}
+
+/* /title-under
+==================================== */
+
+
+/* title-icon
+==================================== */
+
+h4.title-icon {
+  font-size: 30px;
+  margin-bottom: 0.8em;
+  padding-left: 2.7em;
+  position: relative;
+  .icon {
+    font-size:1.9em;
+    line-height: 1em;
+    top: -0.25em;
+    left: 0;
+    margin-right: 21px;
+    position: absolute;
+  }
+  @media (max-width: @screen-xs-min) {
+      &{
+           font-size: 1.35em;
+           margin-bottom: 1em;
+      }
+  }
+}
+
+/* /title-icon
+==================================== */
+
+
+
+
+
+/****************************************
+* end title 
+*****************************************/
+
+

@@ -1,0 +1,109 @@
+/*=== multitooltip ===*/
+.multitooltip .tip.on-top:after, .multitooltip .tip.on-bottom:after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.multitooltip .tip.on-right:after, .multitooltip .tip.on-left:after {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.multitooltip {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.multitooltip .tip {
+  position: absolute;
+  width: 180px;
+  color: #777;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7em;
+  text-align: left;
+  border-radius: 0;
+  background: #3c3c3c;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  cursor: auto;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .25s ease-in;
+          transition: all .25s ease-in;
+}
+.multitooltip .tip span {
+	display: block;
+}
+.multitooltip .tip strong {
+	color: #fff;
+	font-weight: normal;
+	padding: 0 5px 0 0;
+}
+.multitooltip .tip:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+}
+.multitooltip .tip.on-top {
+  bottom: 18px;
+  left: 0;
+}
+.multitooltip .tip.on-top:after {
+  bottom: -7px;
+  left: 20px;
+  border-top: 7px solid #333;
+}
+.multitooltip .tip.on-right {
+  top: -100%;
+  left: 103%;
+}
+.multitooltip .tip.on-right:after {
+  top: 37%;
+  left: -7px;
+  border-right: 7px solid #333;
+}
+.multitooltip .tip.on-bottom {
+  top: 28px;
+  left: 0;
+}
+.multitooltip .tip.on-bottom:after {
+  top: -7px;
+  left: 20px;
+  border-bottom: 7px solid #333;
+}
+.multitooltip .tip.on-left {
+  top: -100%;
+  right: 103%;
+}
+.multitooltip .tip.on-left:after {
+  top: 37%;
+  right: -7px;
+  border-left: 7px solid #333;
+}
+.multitooltip:hover .tip {
+  opacity: 1;
+  visibility: visible;
+}
+.multitooltip:hover .tip.on-top {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.multitooltip:hover .tip.on-right {
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
+}
+.multitooltip:hover .tip.on-bottom {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+.multitooltip:hover .tip.on-left {
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
+}

@@ -1,0 +1,637 @@
+/****************************************
+* gallery(
+	gallery-layout-1.html
+	gallery-layout-2.html
+	gallery-layout-3.html
+	gallery-layout-4.html
+	gallery-layout-5.html
+)
+*****************************************/
+
+
+
+
+/* ---- isotope ---- */
+
+	
+.filter-nav{
+	text-align: center;
+	padding-bottom: 50px;
+	div{
+		display: inline-block;
+		background: #f5f5f5;
+		text-transform: uppercase;
+		font-weight: 500;
+		text-decoration: none;
+		color: @dark-text-color;
+		margin:0 5px;
+		margin-bottom: 10px;
+		padding:14px 16px; 
+		.transition(all, 300ms, linear, 0s);
+		cursor: pointer;
+		font-size: 13px;
+		line-height: 1em;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover{
+			background: @custom-color;
+			color: @color-white;
+		}
+		&.current{
+			background: @custom-color;
+			color: @color-white;
+		}
+	}
+}	
+
+.gallery-content{
+	.filter-content-item{
+		padding: 0;
+		margin: 0;
+		overflow: hidden;		
+	}
+	.zomm-gallery{
+		width: 67px;
+		height: 67px;
+		background: #ffffff;
+		display: inline-block;
+		font-size: 36px;
+		line-height: 1.9em;
+		text-align: center;
+		text-decoration: none;
+		color: @dark-text-color;
+		.transition(all, 300ms, linear, 0s);
+
+		-webkit-border-radius: 50%;
+		  -moz-border-radius: 50%;
+		  border-radius: 50%;
+		&:before{
+			content: "\e8ff";
+			display: block;
+			position: relative;
+			margin-left: 1px;
+			  font-family: 'Material Icons';
+		}
+		&:hover{
+			background: @custom-color;
+			color: @color-white;
+		}
+	}
+	.link-gallery{
+		width: 67px;
+		height: 67px;
+		background: #ffffff;
+		display: inline-block;
+		font-size: 36px;
+		line-height: 1.9em;
+		text-align: center;
+		text-decoration: none;
+		color: @dark-text-color;
+		.transition(all, 300ms, linear, 0s);
+
+		-webkit-border-radius: 50%;
+		  -moz-border-radius: 50%;
+		  border-radius: 50%;
+		&:before{
+			 content: "\e5c8";
+			display: block;
+			position: relative;
+			margin-left: 1px;
+			  font-family: 'Material Icons';
+		}
+		&:hover{
+			background: @custom-color;
+			color: @color-white;
+		}
+	}
+	img{
+			width: 100%;
+			height: auto;
+	}
+	.title{
+		font-size: 22px;
+		line-height: 1em;
+		margin-top: 0px;				
+		a{	
+			&:focus{
+				text-decoration: none;
+				color: @dark-text-color;
+			}
+			&:hover{
+				color: @custom-color;
+				text-decoration: none;
+			}
+		}
+	}
+	figure{
+		position: relative;
+		display: block;
+
+	
+		figcaption{
+			position: absolute;
+			 background: rgba(255, 255, 255, 0.9);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0%;
+			display: block;
+			padding:5% 10%; 
+			.opacity(0);
+			z-index: 0;
+				-moz-transition: all 0.3s linear;
+				 -o-transition: all 0.3s linear;
+				 -webkit-transition: all 0.3s linear;
+		}
+		&:hover figcaption{
+			.opacity(1);
+			z-index: 7;
+			left: 0;
+		}
+	}
+	.button-box{
+		position: absolute;
+		
+		@media (max-width: @screen-xl) {
+			bottom: 7.5%;
+			right: 5.3%;
+			font-size: 30px;
+		}
+		@media (min-width: @screen-xl) {
+			bottom: 13.5%;
+			right: 10.3%;
+			font-size: 36px;
+		} 
+	}
+	@media (max-width: @screen-lg-min) {		
+		figcaption {
+			padding-top: 5%;
+			
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 50px;
+			height: 50px;
+			font-size: 30px;
+			line-height: 1.7em;
+		}
+		.button-box{
+			bottom: 6%;
+		}
+	}
+	@media (max-width: @screen-lg-min) {
+		.title{
+			font-size: 19px;
+		}
+		.font18{
+			font-size: 15px;
+		}
+		figcaption {
+			padding-top: 2%;
+			p{
+				font-size: 13px;
+				line-height: 1.5em;
+			}
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 35px;
+			height: 35px;
+			font-size: 24px;
+			line-height: 1.45em;
+		}
+		.button-box{
+			bottom: 3%;
+		}
+	}
+
+ 
+
+	
+}
+
+.gallery-layout-3.gallery-content{
+		
+	.title{			
+		@media (max-width: 1677px) {
+			margin-top: 27px;
+		}
+		
+	}
+	
+	.button-box{		
+		@media (max-width: 1677px) {
+			bottom: 7.5%;
+			right: 5.3%;
+			font-size: 30px;
+		}		
+	}
+	@media (max-width: 1677px) {		
+		figcaption {
+			padding-top: 5%;
+			
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 50px;
+			height: 50px;
+			font-size: 30px;
+			line-height: 1.7em;
+		}
+		.button-box{
+			bottom: 6%;
+		}
+	}
+	@media (max-width: 1677px) {
+		.title{
+			font-size: 19px;
+		}
+		.font18{
+			font-size: 15px;
+		}
+		figcaption {
+			padding-top: 2%;
+			p{
+				font-size: 13px;
+				line-height: 1.5em;
+			}
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 35px;
+			height: 35px;
+			font-size: 24px;
+			line-height: 1.45em;
+		}
+		.button-box{
+			bottom: 3%;
+		}
+	}
+
+ .text-center{ 	
+ 	.button-box{	
+		@media (max-width: 1677px) {
+			padding-top: 3%;
+		}
+		
+	}
+ }
+
+}
+
+
+
+.gallery-layout-4.gallery-content{	
+	.block-table{		
+	   	height: 100%;
+	}
+	figcaption{
+	 	 padding-top: 11%;
+	 	 text-align: center;
+	 	.button-box{
+			position: relative;
+			padding-top: 5%;
+			right: auto !important;
+			bottom: inherit;
+			@media (max-width:  @screen-xl) {
+				padding-top: 3%;
+			}
+			@media (min-width: @screen-xl) {
+				padding-top: 5%;
+			}
+		}
+		p{
+			display: none;	
+		}
+	 }
+		
+	@media (max-width: 1641px) {	
+		figcaption {			
+			    padding: 5% 5%;
+			
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 50px;
+			height: 50px;
+			font-size: 30px;
+			line-height: 1.7em;
+		}
+		.button-box{
+			bottom: 6%;
+		}
+	}
+	@media (max-width: 1641px) {
+		.title{
+			font-size: 17px;
+			margin-top: 27px;
+		}
+		.font18{
+			font-size: 14px;
+		}
+		figcaption {
+			
+			p{
+				font-size: 13px;
+				line-height: 1.5em;
+			}
+		}	
+		.zomm-gallery,
+		.link-gallery{
+			width: 40px;
+			height: 40px;
+			font-size: 26px;
+			line-height: 1.6em;
+		}
+		.button-box{
+			bottom: 0%;
+		}
+	}
+
+ figcaption{ 	
+ 	.button-box{
+ 	text-align: center;
+ 			
+		@media (max-width: 1641px) {
+			padding-top: 3%;
+		}
+		
+	}
+ }
+ @media (max-width: 517px) {
+ 	figcaption {
+			padding-top: 15%;
+			
+		}	
+ }
+
+}
+
+
+
+/* add class content-cente */
+
+.gallery-content{
+	.content-center{
+		.button-box{
+			    position: relative;
+			    right: auto;
+			    top: auto;
+			    text-align: center;
+		}
+	}
+}
+
+/* /add class content-cente */
+
+
+.col-item-5{
+	
+	float: left;
+	@media (max-width: 517px) {
+		&{
+			width: 100% !important;
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		&{
+			width: 50%;
+		}
+	}
+	@media (min-width: @screen-sm-min) {
+		&{
+			width: 33.3%;
+		}
+	}
+	@media (min-width: @screen-md-min) {
+		&{
+			width: 25%;
+		}
+	}
+	@media (min-width: @screen-lg-min) {
+		&{
+			width: 20%;
+		}
+	}
+	@media (min-width: @screen-xl) {
+		&{
+			width: 20%;
+		}
+	}
+}
+
+.col-item-4{
+	
+	float: left;
+	@media (max-width: @screen-xs-max) {
+		&{
+			width: 100%;
+		}
+	}
+	@media (min-width: @screen-md-min) {
+		&{
+			width: 50%;
+		}
+	}
+	@media (min-width: @screen-lg-min) {
+		&{
+			width: 25%;
+		}
+	}
+	@media (min-width: @screen-xl) {
+		&{
+			width: 25%;
+		}
+	}
+}
+
+
+
+
+.css-masonry{
+	.filter-content-item{
+		overflow: inherit;
+		float: inherit;
+	}
+
+	@media (max-width: @screen-xs-max) {		
+		column-count: 1; 
+		column-gap: 0em; 
+
+		-webkit-column-count: 1; -moz-column-count: 1; column-count: 1;
+		-webkit-column-gap: 0em; -moz-column-gap: 0em; column-gap: 0em;		
+	}
+	@media (min-width: @screen-sm-min) {		
+		column-count: 2; 
+		column-gap: 0em; 
+
+		-webkit-column-count: 2; -moz-column-count: 2; column-count: 2;
+		-webkit-column-gap: 0em; -moz-column-gap: 0em; column-gap: 0em;		
+	}
+	@media (min-width: @screen-lg-min) {		
+		column-count: 3; 
+		column-gap: 0em; 
+
+		-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
+		-webkit-column-gap: 0em; -moz-column-gap: 0em; column-gap: 0em;		
+	}
+	@media (min-width: @screen-xl) {		
+		column-count: 4; 
+		column-gap: 0em; 
+
+		-webkit-column-count: 4; -moz-column-count: 4; column-count: 4;
+		-webkit-column-gap: 0em; -moz-column-gap: 0em; column-gap: 0em;		
+	}
+	.filter-content-item {
+		display: inline-block; 
+		width: 100%;           
+		position: relative;
+	}
+}
+
+.gallery-content{
+	.block-table{
+		display: table;
+    	width: 100%;
+    	height: 82%;
+	}
+	.content-center {
+		.block-table{		
+	    	height: 100%;
+		}
+		.title,
+		em,
+		p{
+			text-align: center;			
+		}
+		em{
+			display: block;
+		}
+	}
+	.block-table-cell{
+		display: table-cell;
+    	vertical-align: middle;
+	}
+}
+
+
+
+
+/****************************************
+* end gallery
+*****************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************
+* gallery(
+	blog-variants.html
+)
+*****************************************/
+
+.gallery-isotope{
+	.gallery__item {
+	  position: relative;
+	  float: left;
+	  width: 19.9%;
+	  overflow: hidden;
+	    img {
+		  width: 100%;
+		  position: relative;
+		  z-index: 0;
+	    }
+	    &--double {
+		  width: 39.9%;
+	    }
+	   .btn {
+		  position: absolute;
+		  top: 50%;
+		  .vertical-align;
+		  left: 50%;
+		  margin-left: -30px;
+		  margin-top: -30px;
+		  opacity: 0;
+		 .transition(all, 300ms, ease, 0s);
+		}
+		&__image {
+	  		overflow: hidden;
+		}
+		&__image__caption {
+		  .transition(all, 300ms, ease, 0s);
+		  position: absolute;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		  top: 50%;
+		  .vertical-align;
+		  z-index: 2;
+		}
+		&__image__caption h6 {
+		  position: absolute;
+		  top: 43%;
+		  width: 100%;
+		  text-align: center;
+		  color: #fff;
+		  font-size: 20px;
+		  line-height: 27px;
+		  font-weight: 500;
+		 .scale(0);
+		 .transition(all, 300ms, ease, 0s);
+		}
+		a {
+		  display: block;
+		  z-index: 2;
+		  position: relative;
+		  overflow: hidden;
+		}
+		a:before {
+		  content: "";
+		  width: 100%;
+		  height: 100%;
+		  display: block;
+		  position: absolute;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #1fc0a0;
+		  opacity: 0;
+		   .transition(all, 300ms, ease, 0s);
+		 .scale(0);
+		}
+		&:hover{
+			:before {
+			  .opacity(0.7);
+			  .scale(1);
+			}
+			h6 {
+			   .opacity(1);
+			  .scale(1);
+			}
+		}
+		
+	}
+	
+	
+}
+
+
+/****************************************
+* end gallery
+*****************************************/
+

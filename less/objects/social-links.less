@@ -1,0 +1,111 @@
+/****************************************
+* social-links
+*****************************************/
+.social-links {
+	margin-bottom: 2.438em;
+	overflow: hidden;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	ul li {
+		display: block;
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	ul a {
+		text-decoration: none;
+		display: inline-block;
+		color: @social-links-color;
+		text-align: center;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		-moz-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		-webkit-transition: all 0.5s ease-out;
+	}
+	&:hover ul a {
+		background-color: @social-links-bg;
+	}
+	&:hover ul a:hover {
+		background-color: @social-links-bg-hover;
+		text-decoration: none;
+	}
+	&.margin-bottom-none {
+		margin-bottom: 0;
+	}
+	&.social-links--large .icon {
+		font-size: 27px;
+	}
+	&.social-links--large .icon {
+		width: 52px;
+		height: 52px;
+		line-height: 52px;
+	}
+	&.text-center{
+		ul{
+			display: inline-block;			
+		}
+	}	
+}
+@media (max-width: @screen-xs-max) {
+	footer .social-links ul {
+		display: table;
+		margin-right: auto;
+		margin-left: auto;
+		li {
+			margin-right: 5px;
+		}
+	}
+}
+
+
+/* social-links-border
+==================================== */
+.social-links.social-links-border {
+	ul a{
+		border:2px solid transparent; 
+		color:@color-white; 
+	}
+	&:hover ul a {
+		background-color: transparent;
+		border-color: @color-white;
+	}
+	&:hover ul a:hover {
+		background-color: @social-links-bg-hover;
+		border-color: @color-white; 
+	}
+	
+}
+
+/* /social-links-border
+==================================== */
+
+
+/* social-links-border
+==================================== */
+.social-links-no-bg {
+	background-color: transparent;	
+	ul a{
+		border:2px solid transparent; 
+		color:@color-white; 
+	}
+	&:hover ul a {
+		background-color: transparent;		
+	}
+	&:hover ul a:hover {
+		background-color: transparent;	
+		color:@dark-text-color; 	
+	}
+	
+}
+
+/* /social-links-border
+==================================== */
+
+/****************************************
+* end social-links
+*****************************************/

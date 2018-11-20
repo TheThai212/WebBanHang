@@ -1,0 +1,43 @@
+/****************************************
+* promos
+*****************************************/
+
+.promos {
+	&__image {
+		position: relative;
+	}
+	&__label{
+		display: block;
+		position: absolute;
+		left: 50%;
+		width: 3.1em;
+		height: 3.1em;
+		margin: 0 0 0 -1.55em;
+		border-radius: 50%;
+		.vertical-align();
+		background-color: fade(@custom-color, 80%);
+		font-size: 3.75em;
+		line-height: 3.1em;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		font-family: @custom-font;
+		font-weight: 600;
+	}
+	h2 {
+		font-size: 1em;
+		font-weight: 500;
+		text-transform: uppercase;
+		padding: 0 10px;
+		margin: 1.7em 0 1em;
+		color: @custom-color;
+		a {
+			color: @custom-color;
+		}
+	}
+}
+
+
+/****************************************
+* end promos
+*****************************************/

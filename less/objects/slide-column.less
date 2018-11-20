@@ -1,0 +1,231 @@
+/****************************************
+* slide column 
+*****************************************/
+
+@media (min-width: @screen-md-min) {	
+	#leftColumn {
+		position: relative;
+		padding-right: 47px;
+		margin-top: -12px;
+		&:after {
+			content: '';
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			width: 1px;
+			height: 100%;
+			background: @border;
+		}
+	}
+}
+@media (max-width: @screen-sm-max) {
+	#leftColumn {
+			position: fixed;
+			display: block;
+			margin: 0;
+			padding: 0;
+			background: #fff;
+			list-style: none;
+			z-index:999999999999999;
+			top: 0;
+			left: -150%;
+			height: 100%;
+			width: 270px;
+			text-align: left;
+			overflow: scroll;
+			
+			.collapse-block {
+				padding: 0 20px;
+			}
+			&.column-open {
+				left: 0;
+				.transition(left, 300ms, linear, 0s);
+			}
+			.slide-column-close {
+				display: block;
+				border-bottom: 1px solid @border;
+				font-size: 0.8125em !important;
+				line-height: 1em !important;
+				font-weight: 600 !important;
+				color: @custom-color;
+				padding: 15px 18px !important;
+				text-decoration: none;
+				text-transform: uppercase;
+				.icon {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 1.7692em;
+					color: @color-dark;
+				}
+			}
+			.filters-block {
+				padding: 15px 20px;
+				border-bottom: 1px solid @border;
+			}
+			.filters-row__select {
+				display: block;
+				padding: 5px 0 0 0;
+				label {
+					min-width: 65px;
+					margin: 0; 
+				}
+				.select-wrapper .select--ys {
+					min-width: 118px;
+				}
+			}
+	}
+	.slide-column-open {
+		margin: 0 15px 0 0;
+		display: inline-block;
+	}
+}
+.icon-to-right{
+	position: absolute;
+	right: 0;
+	top:3px;
+}
+
+
+#leftColumn.column-open{		
+	padding-top: 59px !important;	
+	.slide-column-close {
+		background: @color-white;		
+		top: 0;
+		width: 100%;
+		z-index: 777;
+		width: 253px;
+		position: fixed;					
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px)
+		and (-webkit-min-device-pixel-ratio: 2) {
+			position: absolute;
+		}
+
+	}		
+}
+
+
+@media (min-width: @screen-md-min) {	
+	#rightColumn {
+		position: relative;
+		padding-left: 47px;
+		margin-top: 0px;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			width: 1px;
+			height: 100%;
+			background: @border;
+		}
+	}
+}
+@media (max-width: @screen-md-max) {
+	#rightColumn {
+		padding-left: 15px;
+		&:after {
+			display: none;			
+		}
+		
+	}
+	
+}
+
+
+
+/* without-left-col
+==================================== */
+
+.without-left-col#leftColumn {
+			&:after{
+				display: none;				
+			}
+			position: fixed;
+			display: block;
+			margin: 0;
+			padding: 0;
+			background: #fff;
+			list-style: none;
+			z-index:100000177;
+			top: 0;
+			left: -150%;
+			height: 100%;
+			width: 320px;
+			text-align: left;
+			overflow: auto;
+			.slide-column-close{
+				width: 320px;
+			}
+			.transition(left, 300ms, linear, 0s);
+			@media (max-width: @screen-xs-max) {
+				width: 270px;
+				.slide-column-close{
+					width: 253px;
+				}
+				
+			}
+			.collapse-block {
+				padding: 0 20px;
+			}
+			&.column-open {
+				left: 0;
+				.transition(left, 300ms, linear, 0s);
+			}
+			.slide-column-close {
+				display: block;
+				border-bottom: 1px solid #e5e5e5;
+				font-size: 0.8125em !important;
+				line-height: 1em !important;
+				font-weight: 600 !important;
+				color: #1fc0a0;
+				padding: 15px 18px !important;
+				text-decoration: none;
+				text-transform: uppercase;
+				.icon {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 1.7692em;
+					color: #333333;
+				}
+			}
+			.filters-block {
+				padding: 15px 20px;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			.filters-row__select {
+				display: block;
+				padding: 5px 0 0 0;
+				label {
+					min-width: 65px;
+					margin: 0; 
+				}
+				.select-wrapper .select--ys {
+					min-width: 118px;
+				}
+			}
+			.collapse-block{
+				padding: 0 20px;
+			}
+	}
+	.slide-column-open {
+		margin: 0 15px 0 0;
+		display: inline-block;
+	}
+
+/* /without-left-col
+==================================== */
+
+.slide-column-open {
+	float: left;
+}
+.text-center{
+	.slide-column-open{
+		float: none;
+	}
+}
+
+/****************************************
+* end slide column 
+*****************************************/

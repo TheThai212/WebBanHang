@@ -1,0 +1,168 @@
+/****************************************
+* search
+*****************************************/
+.search {
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 0;
+		&:hover {
+			text-decoration: none;
+			.icon {
+				color: @custom-color;
+
+			}			
+		}
+		.icon {
+			position: relative;
+			font-size: 1.8125em;
+			color: @dark-text-color;
+			line-height: 32px;
+			padding: 10px 0 6px;
+			display: inline-block;		}
+	}
+}
+@media (max-width: @mobile-menu-on) {
+	.search {
+		a {
+			&:hover {
+				.icon {
+					color: #ffffff;
+				}			
+			}
+			.icon {
+				color: #ffffff;
+			}
+		}
+	}
+}
+.search-dropdown {
+    position: absolute;
+	width: 100%;
+    right: 0;
+	z-index: 1;
+	margin-top: -52px;
+    background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	.transition (all, 300ms);
+	&.open {
+		visibility: visible;
+		opacity: 1;
+	}
+	.input-outer {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		padding-right: 62px;
+		@media (max-width: @mobile-menu-on) {
+			height: 55px;
+		}		
+		input {
+			width: 100%;
+			height: 51px;
+			border: 1px solid #e5e5e5;
+			padding: 14px 15px;
+			line-height: 21px;
+			@media (max-width: @mobile-menu-on) {
+				height: 55px;
+			}
+		}
+		button {
+			position: absolute;
+			right: 65px;
+			top: 0;
+			border: none;
+			background: none;
+			font-size: 1.8em;
+			padding: 13px 10px 7px;
+			line-height: 1em;
+			&:hover {
+				color: @custom-color;
+			}
+		}	
+	}
+	.search__close {
+		margin-right: 12px;
+	}
+}
+@media (max-width: @mobile-menu-on) {
+	.search.open {
+		width: 100%;
+		.search-dropdown {
+			width: 100%;
+			display: block;
+		}
+	}
+	.search-dropdown {
+		width: auto;
+		right: -18px;
+		margin-top: -55px;
+		height: 55px;
+		display: none;
+		.input-outer {
+			height: 55px;
+			input {
+				height: 55px;
+				margin-left: 15px;
+			}
+		}
+		.search__close .icon {
+			color: #333333;
+			&:hover {
+				color: @custom-color;
+			}
+		}
+	}
+}
+
+
+/* search-outer
+==================================== */
+.search-outer{
+	.input-outer{
+		position: relative;
+		input{
+			width: 100%;
+			height: 60px;
+			border: 1px solid #e5e5e5;
+			padding: 13px 15px 14px 20px;
+			line-height: 21px;
+			font-weight: 500;
+			font-size: 18px;
+		}
+		input::-webkit-input-placeholder {
+			color: @dark-text-color;
+		}
+		input::-moz-placeholder {
+			.placeholder
+		}
+		input:-ms-input-placeholder {
+			color: @dark-text-color;
+		}
+		input:-moz-placeholder {
+			color: @dark-text-color;
+		}	
+		button{
+			position: absolute;
+			right: 0px;
+			top: 0;
+			border: none;
+			background: none;
+			font-size: 1.8em;
+			padding: 16px 17px 7px;
+			line-height: 1em;
+			color: @dark-text-color;
+		}
+
+	}	
+}
+
+/* /search-outer
+==================================== */
+
+
+/****************************************
+* end search
+*****************************************/

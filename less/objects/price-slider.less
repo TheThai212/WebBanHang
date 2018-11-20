@@ -1,0 +1,103 @@
+/****************************************
+* price slider
+*****************************************/
+#priceSlider {
+	margin: 20px 0 26px;
+}
+.noUi-horizontal {
+	height: 4px;
+}
+.noUi-background {
+	background: @border;
+	box-shadow: none;
+}
+.noUi-connect {
+	background: lighten(@custom-color, 5%);
+	box-shadow: none;
+	-webkit-transition: background 450ms;
+	transition: background 450ms;
+}
+.noUi-origin {
+	border-radius: 0;
+}
+.noUi-target {
+	border-radius: 0;
+	border: 0;
+	box-shadow: none;
+}
+.noUi-target.noUi-connect {
+	box-shadow: inset 0 0 3px rgba(51,51,51,0.45), 0 3px 6px -5px #BBB;
+}
+
+.noUi-draggable {
+	cursor: w-resize;
+}
+.noUi-vertical .noUi-draggable {
+	cursor: n-resize;
+}
+.noUi-handle {
+	border: 0;
+	border-radius: 50%;
+	background: darken(@custom-color, 2%);
+	cursor: pointer;
+	box-shadow: none;
+}
+.noUi-horizontal .noUi-handle {
+	width: 19px;
+	height: 19px;
+	left: -9.5px;
+	top: -8px;
+}
+.noUi-active {
+	box-shadow: none;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+	display: none;
+}
+.noUi-handle:after {
+	left: 17px;
+}
+
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+	background: #B8B8B8;
+}
+[disabled].noUi-origin,
+[disabled] .noUi-handle {
+	cursor: not-allowed;
+}
+
+.price-input {
+	display: inline-block;
+	vertical-align: top;
+	label {
+		display: block;
+		font-weight: normal;
+		float: none;
+		margin: 0;
+	}
+	input[type=text] {
+		display: inline-block;
+		border: 1px solid @border;
+		color: @text-color;
+		width: 67px;
+		font-size: 1em;
+		line-height:  1.25em;
+		padding: 9px 0;
+		text-align: center;
+	}
+	.btn {
+		margin: 27px 0 0 5px;
+	}
+}
+.price-input-divider {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 30px 0 0;
+}
+
+/****************************************
+* end price slider
+*****************************************/

@@ -1,0 +1,114 @@
+/****************************************
+* nav-select-item
+*****************************************/
+.nav-select-item{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: @dark-text-color;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;	
+	li{
+		display: block;
+		float: left;		
+		text-align: center;
+		width: 10%;
+		a{
+			display: block;
+			text-align: center;
+			color:@dark-text-color;
+			text-decoration: none;			
+			.icon-clothes{
+				font-size: 153px;
+				line-height: 1em;
+				color: @custom-color;
+				width: 100%;
+				display: block;
+				text-align: center;
+				.transition();
+				&:before{
+					margin-left: 0;
+					margin-right: 0;
+				}
+				&:hover{
+					color: @dark-text-color;
+				}
+			}
+			&:hover{
+				color: @dark-text-color;
+
+			}
+		}
+		
+		
+		@media (max-width: @screen-xs-max) {
+			&{
+				width: 33.3%;
+				&:last-child{
+					margin-left: 33.3%;
+				}	
+			}
+		}
+		@media (min-width: @screen-sm-min) {
+			&{
+				width: 20%;
+				font-size: 17px;
+				a .icon-clothes{
+					font-size: 130px;
+				}	
+				&:last-child{
+					margin-left: 0%;
+				}
+			}
+		}
+		@media (min-width: @screen-md-min) {
+			&{
+				width: 20%;	
+				&:last-child{
+					margin-left: 0%;
+				}
+			}
+		}
+		@media (min-width: @screen-lg-min) {
+			&{
+				width: 20%;	
+			}
+		}
+		@media (min-width: @screen-xl) {
+			&{
+				width: 10%;	
+			}
+		}
+
+		@media (max-width: 530px) {
+			&{
+				font-size: 15px;
+				
+				a .icon-clothes{
+					font-size: 100px;
+				}	
+			}
+		}
+		@media (max-width: 400px) {
+			&{
+				font-size: 15px;
+				width: 50%;
+				&:last-child{
+					margin-left: 0%;
+				}					
+			}
+		}
+				
+	}
+}
+
+/****************************************
+* end nav-select-item
+*****************************************/
+
+
+

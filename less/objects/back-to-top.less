@@ -1,0 +1,64 @@
+/****************************************
+* back-to-top
+*****************************************/
+
+.back-to-top {
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 10%;
+	z-index: 1000;
+	width: 62px;
+	height: 62px;
+	background-color: @custom-color;
+	color: @color-white;
+	text-align: center;
+	font-size: 2.77em;
+	line-height: 1.4em;
+	@media (max-width: @screen-sm-min) {
+		display: none !important;
+		
+	}
+
+	-moz-transition:all 0.5s ease-out;
+		-o-transition:all 0.5s ease-out;
+		-webkit-transition:all 0.5s ease-out;
+	span{
+		color: @color-white;
+	}
+	&:hover{
+
+		animation:animation-arrow-top alternate infinite 0.4s;
+		-moz-animation:animation-arrow-top alternate infinite 0.4s;
+		-webkit-animation:animation-arrow-top alternate infinite 0.4s;
+	}
+}
+
+
+/* arrow animation */
+@-webkit-keyframes animation-arrow-top {
+	0% {line-height: 1.4em;}
+	100% {line-height: 1.1em;}
+}
+@-moz-keyframes animation-arrow-top {
+	0% {line-height: 1.4em;}
+	100% {line-height: 1.1em;}
+}
+@-ms-keyframes animation-arrow-top {
+	0% {line-height: 1.4em;}
+	100% {line-height: 1.1em;}
+}
+@-o-keyframes animation-arrow-top {
+	0% {line-height: 1.4em;}
+	100% {line-height: 1.1em;}
+}
+@keyframes animation-arrow-top {
+	0% {line-height: 1.4em;}
+	100% {line-height: 1.1em;}
+}
+/* /arrow animation */
+
+/****************************************
+* end back-to-top
+*****************************************/

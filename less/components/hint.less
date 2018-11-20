@@ -1,0 +1,101 @@
+/*=== tooltip ===*/
+tooltip tip.on-top:after, tooltip tip.on-bottom:after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+tooltip tip.on-right:after, tooltip tip.on-left:after {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+tooltip {
+  position: relative;
+  color: #e94a34;
+  cursor: pointer;
+}
+tooltip tip {
+  position: absolute;
+  width: 180px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+  border-radius: 3px;
+  background: #333;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  cursor: auto;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .25s ease-in;
+          transition: all .25s ease-in;
+}
+tooltip tip:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+}
+tooltip tip.on-top {
+  bottom: 18px;
+  left: 0;
+}
+tooltip tip.on-top:after {
+  bottom: -7px;
+  left: 20px;
+  border-top: 7px solid #333;
+}
+tooltip tip.on-right {
+  top: -100%;
+  left: 103%;
+}
+tooltip tip.on-right:after {
+  top: 37%;
+  left: -7px;
+  border-right: 7px solid #333;
+}
+tooltip tip.on-bottom {
+  top: 18px;
+  left: 0;
+}
+tooltip tip.on-bottom:after {
+  top: -7px;
+  left: 20px;
+  border-bottom: 7px solid #333;
+}
+tooltip tip.on-left {
+  top: -100%;
+  right: 103%;
+}
+tooltip tip.on-left:after {
+  top: 37%;
+  right: -7px;
+  border-left: 7px solid #333;
+}
+tooltip:hover tip {
+  opacity: 1;
+  visibility: visible;
+}
+tooltip:hover tip.on-top {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+tooltip:hover tip.on-right {
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
+}
+tooltip:hover tip.on-bottom {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+tooltip:hover tip.on-left {
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
+}

@@ -1,0 +1,232 @@
+// BOOTSTRAP VARIABLES
+
+//== Scaffolding
+
+//** Background color for `<body>`.
+@body-bg:                          #fff;
+//** Global text color on `<body>`.
+@text-color:                       #777777;
+//** Global textual link color.
+@link-color:                       @text-color;
+//** Link hover color set via `darken()` function.
+@link-hover-color:                 @text-color;
+//** Link hover decoration.
+@link-hover-decoration: underline;
+@font-family-base:                 @custom-font;
+@font-size-base:                   16px;
+
+//== Typography
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.6875; // 27/16
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~27px
+
+@font-size-h1:            floor((@font-size-base * 1.875)); // ~30px
+@font-size-h2:            floor((@font-size-base * 1.875)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.125)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          #333333;
+
+// color options
+
+
+
+@color-black:                      #000;
+@color-dark:                       #333;
+@color-red:                        #fa6b6b;
+@color-pink:                       #fa6b6b;
+@color-blue-dark:                  #02a8f3;
+@color-blue:                       #395499;
+@color-blue-light:                 #67e0fa;
+@color-green:                      #21caa9;
+@color-green-dark:                 #1fc0a0;
+@color-green-light:                #41df7c;
+@color-gray:                       #999999;
+@color-yellow:                     #feea3a;
+@color-coquelicot:                 #fd6940;
+
+
+
+// Border
+@border:                           #e5e5e5;
+
+// note
+@note:                             #fa6b6b;
+
+//fill-bg
+@fill-bg:                          #f5f5f5;
+@fill-bg-lighter:                  #f8f8f8;
+@fill-bg-custom:                   @custom-color;
+
+// Pagination
+
+@pagination-bg:                    #f5f5f5;
+@pagination-border:                transparent;
+
+@pagination-hover-color:           @custom-color;
+@pagination-hover-bg:              #f5f5f5;
+@pagination-hover-border:          transparent;
+
+@pagination-active-color:          #ffffff;
+@pagination-active-bg:             @dark-text-color;
+@pagination-active-border:         transparent;
+
+
+
+// menu mobile
+@mobile-fon:                       @color-white;
+@mobile-separator:                 @border;
+@mobile-text-color:                @dark-text-color;
+@mobile-font-size:                 18px;
+@mobile-line-height:               1.1em;
+@mobile-hover-bg:                  #f7f7f7;
+@mobile-hover-text:                @custom-color;
+@mobile-btn-close-color:           @dark-text-color;
+@mobile-btn-close-color-hover:     @custom-color;
+
+
+// Comments
+@avatar-bg:  					   #f5f5f5;
+
+// END BOOTSTRAP VARIABLES
+
+// YOURSTORE VARIABLES
+
+@custom-color:                     #1fc0a0;
+@custom-color1:                    #55acee;
+@custom-color-alt:                 #fa6b6b;
+@color-white:                      #fff;
+
+// default space between content block
+@content-top-margin:               75px;
+
+
+@dark-text-color:                  #333333;
+
+@button-bg:                        @custom-color;
+@button-color:                     #ffffff;
+@button-bg-light:                  #a8afb3;
+@button-color-light:               #ffffff;
+@button-bg-dark:                   #374850;
+@button-color-dark:                #ffffff;
+
+@button-bg-alt:                    @custom-color-alt;
+@button-color-alt:                 #ffffff;
+
+@rating-color:                     #ffaf47;
+@rating-empty-color:               #d2d2d2;
+
+@breadcrumb-color:                 @text-color;
+@breadcrumb-active-color:          @dark-text-color;
+
+// Tabs
+@nav-tabs-active-link-bg:          #ffffff;
+@nav-tabs-link-hover-bg:           #ffffff;
+@nav-tabs-active-link-hover-bg:    #ffffff;
+@nav-tabs-link-hover-border-color: #e5e5e5;
+@tab-pane-padding:                 30px;
+
+@mobile-menu-off:                  1025px;
+@mobile-menu-on:                   1024px;
+
+
+
+
+
+//panel
+@panel-number-bg:				   @fill-bg;
+@panel-number-bg-act:		       @custom-color;
+
+@panel-number-color:			   @dark-text-color;
+@panel-number-color-act:		   @color-white;
+
+
+
+@panel-title-padding: 		       34px 0 25px 77px;			   
+@panel-title-color:			       @color-white;
+
+
+
+
+//product
+
+@price-old:                        #fa6b6b;
+
+
+
+
+
+//banner-icon
+@banner-icon-bg:                   #f5f5f5;
+@banner-icon-bg-hover:             @custom-color;
+@banner-icon-color:                #333333;
+@banner-icon-color-hover:          @color-white;
+@banner-icon-title-color:          @custom-color;
+@banner-icon-title-color-hover:    @dark-text-color;
+
+
+//media-box-link
+@box-link-hover:                   #f5f5f5;
+
+
+
+//social links
+@social-links-color:          		#c4c4c4;
+
+@social-links-bg:            		#f3f3f3;
+@social-links-bg-hover:   			#333333;
+
+
+//badge
+@badge-bg:            				#e8e8e8;
+@badge-text:            			#777777;
+
+
+//pagination
+@pagination-bg:                     #f5f5f5;
+@pagination-bg-hover:               #333333;
+
+@pagination-color:                  #333333;
+@pagination-color-hover:            #fff;
+
+
+
+//form
+@placeholder-color:                 #333;
+
+
+//filters button
+@btn-img-bg:                        @text-color;
+@btn-img-bg-hover:                  @custom-color;
+@btn-img-border:                    @color-white;
+
+
+
+
+//main slider button
+@slider-arrow-color:                 #d2d2d2;
+@slider-arrow-color-hover:           @custom-color;
+
+
+
+
+//carusel button
+@carusel-button-bg:                  #f5f5f5;
+@carusel-button-color:               @dark-text-color;
+
+@carusel-button-bg-hover:            @custom-color;
+@carusel-button-color-hover:         @color-white;
+
+
+
+
+
+// END YOURSTORE VARIABLES

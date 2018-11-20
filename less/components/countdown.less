@@ -1,0 +1,117 @@
+/*=== countdown ===*/
+.countdown_box {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+.countdown_inner {
+  overflow: hidden;
+  background-color: fade(@custom-color-alt, 80%);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.3em 0 0.4em;
+  text-align: center;
+  color: #fff;
+}
+
+.countdown-section {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 0.5em 0;
+  margin: 0 0.9em;
+  line-height: 0.714em;
+  font-size: 0.875em;
+  white-space: nowrap;
+  @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+	margin: 0 0.8em;
+  }
+}
+.countdown-section:before{
+  content:":";
+  display: block;
+  position: absolute;  
+  top: 50%;
+  margin-top: -0.3em;
+  font-weight: bold;
+}
+.countdown-section:nth-child(1):before{
+  right: -46%;
+}
+.countdown-section:nth-child(2):before{
+  right: -65%;
+}
+.countdown-section:nth-child(3):before{
+  right: -65%;
+}
+.countdown-section:last-child:before{
+  display: none;
+}
+.countdown-amount {
+  line-height: 1em; 
+  font-weight: bold;
+  padding-bottom:0.2em;
+  display: block;
+}
+
+
+
+.countdown-period {
+  display: block;
+  text-transform: lowercase;
+}
+.countdown-descr {
+  display: block;
+  width: 100%;
+}
+
+/*=== /countdown ===*/
+
+
+/* countdown-transparent
+==================================== */
+.countdown-transparent{
+  .countdown{
+    &-section {
+      background-color: rgba(255, 255, 255, 0.8); 
+     color: @custom-color;
+     width: 127px;
+     height: 127px;
+     .radius(50%);
+     line-height: 1em;
+     margin: 0 10px 20px;
+     &:before{
+      display: none;
+     }
+    }
+    &-amount{
+      font-size: 50px;
+      line-height: 1em;
+      font-weight: 500;
+      font-family: @custom-font;
+      padding-top: 11%;
+     }
+    &-period{
+       font-size: 18px;
+       line-height: 1em;
+       color: @dark-text-color;
+    }
+
+    @media (max-width: @screen-md-max) {
+      &-section {        
+         width: 87px;
+         height: 87px;       
+      }
+      &-amount{
+        font-size: 30px;
+      }
+      &-period{
+        font-size: 15px;
+      }
+    }
+  }  
+}
+/* /countdown-transparent
+==================================== */

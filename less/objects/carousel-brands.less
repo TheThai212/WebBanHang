@@ -1,0 +1,157 @@
+/****************************************
+* carousel brands 
+*****************************************/
+
+.brand-link{
+    display: inline-block;
+	.transition (all, 300ms);
+    img {
+		display: block;
+		.transition (all, 300ms);
+		.opacity(0.3);
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		filter: grayscale(100%);
+		filter: gray; /* IE 6-9 */
+	}
+	&:hover {
+		img{
+			.opacity(1);
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+			filter: grayscale(0%);
+			filter: gray; /* IE 6-9 */
+		}
+	}
+}
+
+.brands-carousel{
+	> div{
+		float: left;
+	}
+	&.slick-initialized > div{
+		float: inherit;
+	}
+}
+
+
+
+.fill-bg-custom{
+	.brands-carousel{
+		padding: 85px 0 57px 0;
+		.opacity(1);
+	    img {			
+			.opacity(1);
+			-webkit-filter: none;
+			-moz-filter: none;
+			-ms-filter: none;
+			-o-filter: none;
+			filter: none;
+			filter: none; /* IE 6-9 */
+		}
+		&:hover {
+			img{
+				.opacity(1);
+				-webkit-filter: none;
+				-moz-filter: none;
+				-ms-filter: none;
+				-o-filter: none;
+				filter: none;
+				filter: none; /* IE 6-9 */
+			}
+		}
+		a:hover{
+			img{
+				.opacity(0.5);
+			}
+		}
+		@media (max-width: 767px) {
+		 padding: 45px 0 17px 0;
+		}
+	}
+	.slick-prev, 
+	.slick-next{
+		 background-color: rgba(256, 256, 256, 0.2);		 
+		 &:before{
+		 	color: @color-white;
+		 }
+		 &:hover{
+		 	 background-color: rgba(256, 256, 256, 0.5);
+		 }
+	}
+}
+
+.fill-bg{
+	.brands-carousel{
+		padding: 85px 0 57px 0;
+		
+		@media (max-width: 767px) {
+		 padding: 45px 0 17px 0;
+		}
+	}
+	.slick-prev, 
+	.slick-next{
+		 background-color: rgba(256, 256, 256, 1);		 
+		 &:before{
+		 	color: @dark-text-color;
+		 }
+		 &:hover{
+		 	 background-color: rgba(256, 256, 256, 1);
+		 	  &:before{
+			 	color: @custom-color;
+			 }
+		 }
+	}
+}
+
+
+/*==== brands ====*/
+
+.brands-list{
+	a {
+		.brand-link;
+    }
+}
+.megamenu {
+	.brands-list{
+		margin-bottom: -20px;
+		img {
+			max-width: 95px;
+		}
+	}
+}
+
+/*==== brands-carousel ====*/
+
+.brands-carousel{
+	margin-top: -15px;
+	.slick-slide {
+		text-align: center;
+	}
+	.slick-list{
+		padding: 10px 8px 10px;
+	}
+	a {
+		.brand-link;
+	}
+	.slick-next {
+		right: 15px;
+	}
+	.slick-prev {
+		left: 15px;
+	}
+	@media (min-width: @screen-sm-min) {
+		.slick-list{
+			margin: 0 85px;
+		}
+	}		
+}
+
+
+/****************************************
+* end carousel brands 
+*****************************************/

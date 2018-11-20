@@ -1,0 +1,266 @@
+/*************************
+* Layout#1 rewrites
+**************************/
+
+
+hr{
+	border-color:@border;
+}
+
+
+
+
+/* slider-rs
+==================================== */
+
+
+.tp-leftarrow.default:before,
+.tp-rightarrow.default:before {
+  color: @color-white; 
+}
+.tp-leftarrow.default:hover,
+.tp-rightarrow.default:hover {  
+  background-color: transparent !important;
+  &:before{
+	color: @custom-color;
+  }
+}
+
+/* / end slider-rs
+==================================== */
+
+
+
+
+/* nav
+==================================== */
+@media (min-width: @mobile-menu-off) {
+	.title-aside-wrapper{
+		background:@title-aside-wrapper;
+	}
+	.navbar.navbar-vertical{
+		border: none;
+		 .mainMenu .navbar-nav > li > a{
+			background:@nav-bg;
+			border-bottom: 1px solid @nav-separator;
+			color: @color-white;
+			&:last-child{
+				border-bottom: 1px solid transparent;
+			}
+			&:hover{
+				background:@nav-bg-hover;
+				color: @color-white;
+			}
+			.icon{
+				color: @color-white;
+			}
+			.badge--menu{
+				border: 1px solid @color-white;
+				background: none !important;
+			}
+		}
+		.megamenu__submenu > li a{
+			border-bottom: 1px solid @border;
+			.badge{
+				position: relative;
+				right: 0;
+				left: inherit;
+				display: inline-block;
+				float: right;
+				top: 1px;
+				&:before,
+				&:after{
+					display: none;					
+				}
+			}
+			.badge--color-dark{
+				background-color:@badge--color-dark;
+			}
+			&:hover{
+				color: @custom-color;
+			}
+		}
+	}
+}
+
+.mainMenu .dropdown-menu{	
+	@media (min-width: @mobile-menu-off) {		
+		.megamenu__submenu > li a{
+		
+			.badge{
+				position: relative;
+				right: 0;
+				left: inherit;
+				display: inline-block;
+				float: right;
+				top: 1px;
+				&:before,
+				&:after{
+					display: none;					
+				}
+			}			
+		}	
+	}
+}
+
+/* end nav
+==================================== */
+
+
+
+
+
+/* product
+==================================== */
+.product {
+	.quick-view{	  
+
+		&:hover b {
+		 	background: rgba(249, 99, 50, 0.85);
+		   	color: @color-white;
+		} 		
+	}
+}
+
+body .fill-bg .radio{
+	color: @color-white;
+}
+
+.options-swatch--size{
+	li a{
+		&:hover{
+			background: @custom-color;
+		}
+	}
+}
+.product__label--sale{
+	background: @custom-color;
+}
+
+.fill-bg{
+	label,
+	.table-total th{
+		color: @color-white;
+	}
+
+}
+.price-box__old{
+	color:@text-color;
+}
+
+.content-sm:hover{
+	position: relative;
+}
+
+/* / end product
+==================================== */
+
+
+
+
+
+.carousel-control{}
+
+
+
+
+/* testimonialsAsid
+==================================== */
+.nav-dot .slick-dots{
+	bottom: 10px;
+}
+
+.testimonialsAsid{	
+	.slick-slide p span:before{
+		color: @color-green;
+	}
+	b{
+		color: @custom-color;
+		text-transform: uppercase;
+	}
+	p{
+		color: @color-white;
+	}
+	em{
+		color: @color-dark1;
+		font-family: @main-font;
+		font-size: 18px;	
+	}
+	.slick-dots li button:before{
+		color: @color-white !important;
+	}
+	.slick-dots li.slick-active button:before{
+		color: @custom-color!important;
+	}
+
+}
+/* / end testimonialsAsid
+==================================== */
+
+
+
+
+/* fill-bg
+==================================== */
+
+.fill-bg{
+	.title-under{
+		color: @color-white;
+		a{
+			color: @color-white;
+			&:hover{
+				color: @custom-color;
+			}
+		}		
+	}
+	.table-total-checkout{
+		th{
+			color: @color-white;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		color: @color-white;
+		a{
+			color: @color-white;
+			&:hover{
+				color: @custom-color;
+			}
+		}	
+	}
+}
+
+/* / fill-bg
+==================================== */
+
+
+/* panel
+==================================== */
+.panel {
+	.panel-heading__number{
+		color: @color-white;
+	}
+}
+/* / panel
+==================================== */
+
+
+
+/* Post
+==================================== */
+.post{	
+	&__title_block{		
+		figure{		
+			background: @custom-color;		
+		}
+						
+	}
+	
+	
+}
+/* end Post
+==================================== */
