@@ -5,10 +5,40 @@
 
     <script>
         
-        $('.quick-view').click(function () {
-                console.log('ok');
+       
+        $(document).ready(function () {
+            $(".quick-view").click(function (e) {
+                e.preventDefault(); 
+                var id = $(this).attr('data-id');
+                $.ajax({
+                    type: "GET",
+                    url: "Request.aspx/GetData",
+                    data: { id: id },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (res) {
+                        var product = JSON.parse(res.d);
+                        console.log(res);
 
-            });
+                        console.log(product);
+
+                        $('#idImgProduct').attr('src', product[0].hinhanhsp);
+                        $('#ProductName').empty();
+                        $('#ProductName').text(product[0].tensp);
+                        $('#price').empty();
+                        $('#price').text(product[0].giasp);
+                        $('#old_price').empty();
+                        $('#old_price').text(product[0].giasp*1,2);
+
+                    },
+                        failure: function (response) {
+                            alert(response.d);
+                        }
+                    });
+          //alert( "Handler for .clickdasdadsaddasasd() called." );
+        });
+        });
+        
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" Runat="Server">
@@ -214,7 +244,7 @@
 												</div>
 												<!-- /product image carousel -->  
 												<!-- quick-view --> 
-												<a href="#" data-toggle="modal" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a> 
+												<a href="#" data-toggle="modal" data-target="#quickViewModal" data-lala="11111" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a> 
 												<!-- /quick-view --> 
 												<!-- countdown_box -->
 												<div class="countdown_box">
