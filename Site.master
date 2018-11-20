@@ -25,6 +25,7 @@
     <!-- Icon Fonts  -->
     <link rel="stylesheet" href="font/style.css">
     <!-- Head Libs -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Modernizr -->
     <script src="external/modernizr/modernizr.js"></script>
     <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
@@ -525,7 +526,7 @@
 						<div class="row product-info-outer">
 							<div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
 								<div class="product-main-image">
-									<div class="product-main-image__item"><img src='images/product/product-big-1.jpg' alt="" /></div>
+									<div class="product-main-image__item"><img id="idImgProduct" src='images/product/product-big-1.jpg' alt="" /></div>
 								</div>
 							</div>
 							<div class="product-info col-xs-12 col-sm-7 col-md-6 col-lg-6">
@@ -534,9 +535,9 @@
 									<div class="product-info__availabilitu pull-right">Availability:   <strong class="color">In Stock</strong></div>
 								</div>
 								<div class="product-info__title">
-									<h2>Lorem ipsum dolor sit ctetur</h2>
+									<h2 id="ProductName">Lorem ipsum dolor sit ctetur</h2>
 								</div>
-								<div class="price-box product-info__price"><span class="price-box__new">$65.00</span> <span class="price-box__old">$84.00</span></div>
+								<div class="price-box product-info__price"><span id="price" class="price-box__new">$65.00</span> <span id="old_price" class="price-box__old">$84.00</span></div>
 								<div class="divider divider--xs product-info__divider"></div>
 								<div class="product-info__description">
 									<div class="product-info__description__brand"><img src="images/custom/brand.png" alt=""> </div>
