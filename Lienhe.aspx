@@ -98,6 +98,7 @@
                             <div class="pull-right note">* Required Fields</div>
                             <asp:Button ID="btnGui" runat="server" Text="Send Message" OnClick="btnGui_Click" />
                             <%--<button class="btn btn--ys btn--xl btn-top" type="submit">Send message</button>--%>
+                            
                             <!-- /button -->
                         </div>						
 					</div>
