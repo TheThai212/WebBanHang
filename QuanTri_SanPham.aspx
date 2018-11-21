@@ -60,7 +60,7 @@
         <table class="auto-style1" width="50%" runat="server">
             <tr>
                 <td class="auto-style4"></td>
-                <td class="auto-style4">Thêm Sản phẩm</td>
+                <td class="auto-style4" style="font-size:large;font-weight:bold">Thêm Sản phẩm</td>
             </tr>
             <tr>
                 <td>Mã sản phẩm</td>
@@ -68,7 +68,7 @@
                     <div>
                         <asp:TextBox ID="txt_masp" runat="server" Width="333px"></asp:TextBox>
                         <asp:Label ID="txtLoi" runat="server" ForeColor="Red"></asp:Label>
-                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_gia" ErrorMessage="Chưa nhập giá" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_masp" ErrorMessage="Chưa nhập mã sản phẩm" ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                     </div>
                 </td>
             </tr>
@@ -77,7 +77,7 @@
                 <td>
                     <div>
                         <asp:TextBox ID="txt_tensp" runat="server" Width="333px"></asp:TextBox>
-                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txt_tinhtrang" ErrorMessage="Chưa nhập" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txt_tensp" ErrorMessage="Chưa nhập tên sản phẩm " ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                     </div>
                 </td>
             </tr>
@@ -86,7 +86,7 @@
                 <td class="auto-style3">
                     <div>
                         <asp:TextBox ID="txt_motasp" runat="server" Width="333px" Rows="4" TextMode="MultiLine"></asp:TextBox>
-                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txt_madm" Display="Dynamic" ErrorMessage="Chưa nhập" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txt_motasp" Display="Dynamic" ErrorMessage="Chưa nhập mô tả sản phẩm" ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                     </div>
                 </td>
             </tr>
@@ -94,7 +94,7 @@
                 <td class="auto-style3">Giá sản phẩm</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txt_gia" runat="server"></asp:TextBox>
-                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txt_gia" ErrorMessage="Chưa nhập giá" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txt_gia" ErrorMessage="Chưa nhập giá" ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -107,23 +107,23 @@
                 <td class="auto-style1">Tình trạng</td>
                 <td class="auto-style1">
                     <asp:TextBox ID="txt_tinhtrang" runat="server"></asp:TextBox>
-                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txt_tinhtrang" ErrorMessage="Chưa nhập" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txt_tinhtrang" ErrorMessage="Chưa nhập" ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">Mã Danh mục</td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txt_madm" runat="server" ></asp:TextBox>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_madm" ErrorMessage="nhập trong khoảng 1-3" ForeColor="Red" MaximumValue="3" MinimumValue="1"></asp:RangeValidator>
-                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txt_madm" Display="Dynamic" ErrorMessage="Chưa nhập" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txt_madm" ErrorMessage="Nhập trong khoảng 1-3" ForeColor="Red" MaximumValue="3" MinimumValue="1" ValidationGroup="ThemSp"></asp:RangeValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txt_madm" Display="Dynamic" ErrorMessage="Chưa nhập mã danh mục" ForeColor="Red" ValidationGroup="ThemSp"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
                     <div>
-                        <asp:Button ID="btn_save" runat="server" Text="Lưu" OnClick="btn_save_Click"/>
-                        <asp:Button ID="btn_huy" runat="server" Text="Hủy" />
+                        <asp:Button ID="btn_save" runat="server" Text="Lưu" OnClick="btn_save_Click" ValidationGroup="ThemSp"/>
+                        <asp:Button ID="btn_huy" runat="server" Text="Hủy" OnClick="btn_huy_Click" />
                     </div>
                 </td>
             </tr>

@@ -58,10 +58,10 @@
                     <!-- SLIDE -1 -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="images/slides/slide-1.jpg" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <img src="images/slides/sl1.jpg" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- TEXT -->
-                        <div class="tp-caption lfl stb"
+                        <%--<div class="tp-caption lfl stb"
                             data-x="205"
                             data-y="center"
                             data-voffset="60"
@@ -74,16 +74,16 @@
                             <div class="tp-caption1--wd-2">Save 20% on</div>
                             <div class="tp-caption1--wd-3">new arrivals </div>
                             <a href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a>
-                        </div>
+                        </div>--%>
                     </li>
                     <!-- /SLIDE -1 -->
                     <!-- SLIDE 2  -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="images/slides/slide-2.jpg" alt="slide2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <img src="images/slides/sl2.jpg" alt="slide2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
                         <!-- TEXT -->
-                        <div class="tp-caption lfr stb"
+                        <%--<div class="tp-caption lfr stb"
                             data-x="right"
                             data-y="center"
                             data-voffset="-5"
@@ -97,14 +97,14 @@
                             <div class="tp-caption2--wd-2">50% off</div>
                             <div class="tp-caption2--wd-3">on all clothes</div>
                             <a href="listing.html" class="link-button button--border-thick pull-right" data-text="Shop now!">Shop now!</a>
-                        </div>
+                        </div>--%>
                     </li>
                     <!-- /SLIDE 2  -->
                     <!-- SLIDE - 3 -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
-                        <img src="images/slides/04/intro_img_03.jpg" alt="slide3" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <img src="images/slides/sl3.jpg" alt="slide3" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <!-- LAYER NR. 1 -->
-                        <div class="tp-caption tp-fade fadeout fullscreenvideo"
+                        <%--                        <div class="tp-caption tp-fade fadeout fullscreenvideo"
                             data-x="0"
                             data-y="0"
                             data-speed="1000"
@@ -122,16 +122,16 @@
                             style="z-index: 2">
 
 
-                            <video class="video-js vjs-default-skin" preload="none"
+                           <%-- <video class="video-js vjs-default-skin" preload="none"
                                 poster='images/slides/video/video_img.jpg' data-setup="{}">
                                 <source src='images/slides/video/explore.mp4' type='video/mp4' />
                                 <source src='images/slides/video/explore.webm' type='video/webm' />
                                 <source src='images/slides/video/explore.ogv' type='video/ogg' />
-                            </video>
-
-                        </div>
+                            </video>--%>
+            </div>
+            --%>
                         <!-- TEXT -->
-                        <div class="tp-caption lfb stb"
+            <%--<div class="tp-caption lfb stb"
                             data-x="center"
                             data-y="center"
                             data-voffset="0"
@@ -146,15 +146,14 @@
                             <div class="tp-caption3--wd-3 color-white">Get huge</div>
                             <div class="tp-caption3--wd-3 color-white">savings!</div>
                             <div class="text-center"><a href="listing.html" class="link-button button--border-thick" data-text="Shop now!">Shop now!</a></div>
-                        </div>
+                        </div>--%>
 
                     </li>
                     <!-- /SLIDE - 3 -->
 
 
 
-                </ul>
-            </div>
+            </ul>
         </div>
     </div>
 		<!-- END REVOLUTION SLIDER --> 

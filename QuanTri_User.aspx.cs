@@ -21,6 +21,7 @@ public partial class QuanTri_User : System.Web.UI.Page
         if (!IsPostBack)
         {
             FillGridView();
+            
         }
     }
 
@@ -50,7 +51,7 @@ public partial class QuanTri_User : System.Web.UI.Page
     //-- Thêm vào DB
     protected void btn_save_Click(object sender, EventArgs e)
     {
-        string insert = "insert into users(Id,Name,Pass) values(@Id,@Name,@Pass)";
+        string insert = "insert into users(Name,Pass) values(@Name,@Pass)";// bỏ id đi do mình đặt id tự tăng nên sẽ ko nhập
         string dem = "Select Count(*) from users";
         string ktra = "Select Count(*) from users where Name ='"+ txt_user.Text+"'" ;
         //-- khởi tạo kết nối DB
@@ -68,7 +69,7 @@ public partial class QuanTri_User : System.Web.UI.Page
         {
             //-- thêm vào SQL
             cmd = new SqlCommand(insert, conn);
-            cmd.Parameters.AddWithValue("@Id", t + 1); //id này có lỗi xóa 1 ptu bất kì nhập thêm ko đc vì trùng id
+            //cmd.Parameters.AddWithValue("@Id", t + 1); //id này có lỗi xóa 1 ptu bất kì nhập thêm ko đc vì trùng id
             cmd.Parameters.AddWithValue("@Name", txt_user.Text);
             cmd.Parameters.AddWithValue("@Pass", txt_pass.Text);
             cmd.ExecuteNonQuery();
@@ -199,4 +200,11 @@ public partial class QuanTri_User : System.Web.UI.Page
         }
     }
     //--Hết code để dấu
+    protected void btn_huy_Click(object sender, EventArgs e)
+    {
+        txt_user.Text = "";
+        txt_pass.Text = "";
+        txt_repass.Text = "";
+
+    }
 }

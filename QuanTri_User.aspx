@@ -35,7 +35,7 @@
             DataKeyNames="Id" Width="66%" 
             OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" PageSize="5" AllowPaging="True" AllowSorting="True" OnRowDataBound="GridView1_RowDataBound" OnSorting="GridView1_Sorting">
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="true" SortExpression="Id" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                 <asp:BoundField DataField="Pass" HeaderText="Pass" SortExpression="Pass" />
                 <asp:TemplateField ShowHeader="False">
@@ -76,15 +76,14 @@
         <table class="auto-style1" width="50%" runat="server">
             <tr>
                 <td class="auto-style4"></td>
-                <td class="auto-style4">Thêm User</td>
+                <td class="auto-style4" style="font-size:large;font-weight:bold">Thêm User</td>
             </tr>
             <tr>
-                <td>Tên</td>
+                <td>Name</td>
                 <td>
                     <div>
                         <asp:TextBox ID="txt_user" runat="server" Width="333px"></asp:TextBox>
-                        <%--<asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Nhập sai!!" ForeColor="Red" ControlToValidate="txt_repass" ControlToCompare="txt_pass"></asp:CompareValidator>--%>
-                        <asp:Label ID="txtLoi" runat="server" ForeColor="Red"></asp:Label>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_user" ErrorMessage="Chưa nhập tên!" ForeColor="Red" ValidationGroup="AddUser"></asp:RequiredFieldValidator>                        <asp:Label ID="txtLoi" runat="server" ForeColor="Red"></asp:Label>
                     </div>
                 </td>
             </tr>
@@ -93,7 +92,7 @@
                 <td>
                     <div>
                         <asp:TextBox ID="txt_pass" runat="server" Width="333px" TextMode="Password"></asp:TextBox>
-                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_pass" ErrorMessage="Chưa nhập Pass!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_pass" ErrorMessage="Chưa nhập Pass!" ForeColor="Red" ValidationGroup="AddUser"></asp:RequiredFieldValidator>
                     </div>
                 </td>
             </tr>
@@ -102,8 +101,8 @@
                 <td class="auto-style3">
                     <div>
                         <asp:TextBox ID="txt_repass" runat="server" Width="333px" TextMode="Password"></asp:TextBox>
-                        <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_repass" Display="Dynamic" ErrorMessage="Chưa nhập Re- password" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                        <%--<asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Nhập sai!!" ForeColor="Red" ControlToValidate="txt_repass" ControlToCompare="txt_pass"></asp:CompareValidator>--%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txt_repass" Display="Dynamic" ErrorMessage="Chưa nhập Re- password" ForeColor="Red" ValidationGroup="AddUser"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Phải nhập giống mật khẩu ở trên" ForeColor="Red" ControlToValidate="txt_repass" ControlToCompare="txt_pass" ValidationGroup="AddUser"></asp:CompareValidator>
                     </div>
                 </td>
             </tr>
@@ -111,8 +110,8 @@
                 <td>&nbsp;</td>
                 <td>
                     <div>
-                        <asp:Button ID="btn_save" runat="server" Text="Lưu" OnClick="btn_save_Click"/>
-                        <asp:Button ID="btn_huy" runat="server" Text="Hủy" />
+                        <asp:Button ID="btn_save" runat="server" Text="Lưu" OnClick="btn_save_Click" ValidationGroup="AddUser"/>
+                        <asp:Button ID="btn_huy" runat="server" Text="Hủy" OnClick="btn_huy_Click"  />
                     </div>
                 </td>
             </tr>
