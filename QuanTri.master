@@ -24,12 +24,12 @@
  <div id="sidebar-wrapper">
  <ul class="sidebar-nav">
  <br />
- <li class="sidebar-brand"><a href="#">Admin Page</a></li>
- <li><a href="Music.aspx"><span class="glyphicon glyphicon-music"></span>&nbsp;&nbsp;Tài khoản người dùng</a>
+ <li class="sidebar-brand"><a href="#">La Thai Store Management Page</a></li>
+ <li><a href="QuanTri_User.aspx"><span class="glyphicon glyphicon-music"></span>&nbsp;&nbsp;Tài khoản người dùng</a>
  </li>
  <li><a href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Danh mục hàng</a>
  </li>
- <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Sản phẩm</a>
+ <li><a href="QuanTri_SanPham.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Sản phẩm</a>
  </li>
  <%--<li><a href="#"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete it!</a>
  </li>
@@ -39,11 +39,26 @@
  </li>
  <li><a href="#"><span class="glyphicon glyphicon-print"></span>&nbsp;&nbsp;Printing</a>
  </li>--%>
- <li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;Logout !!!!</a>
+ <li><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;Logout!!</asp:LinkButton>
  </li>
  </ul>
  </div>
+
+
+      <div id="page-content-wrapper">
+ <div class="container-fluid">
+ <div class="row">
+ <div class="col-lg-12" style="color:#000">
+
      <asp:ContentPlaceHolder ID="Main" runat="server"></asp:ContentPlaceHolder>
+
+     </div>
+     </div>
+     </div>
+
+
+
+
  </div>
  <%--This is a modified Page by Parallelcodes.com. To view the original style-sheet and original post please visit : 
 SOURCE http://startbootstrap.com/template-overviews/simple-sidebar
@@ -54,12 +69,12 @@ GITHUB URL https://github.com/IronSummitMedia/startbootstrap-simple-sidebar
 
  <script src="js/bootstrap.min.js"></script>
 
- <script>
-     $("#menu-toggle").click(function (e) {
-         e.preventDefault();
-         $("#wrapper").toggleClass("toggled");
-     });
- </script>
+     <script>
+         $("#menu-toggle").click(function (e) {
+             e.preventDefault();
+             $("#wrapper").toggleClass("toggled");
+         });
+     </script>
 
  </form>
 </body>
