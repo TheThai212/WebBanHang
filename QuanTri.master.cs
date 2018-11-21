@@ -11,4 +11,10 @@ public partial class QuanTri : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Session.RemoveAll();
+        Response.Redirect("TrangChu.aspx");
+    }
 }
