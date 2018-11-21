@@ -10,7 +10,7 @@
  <meta name="author" content="">
  <%--SOURCE http://startbootstrap.com/template-overviews/simple-sidebar/--%>
  <%--GITHUB URL https://github.com/IronSummitMedia/startbootstrap-simple-sidebar--%>
- <title>Simple ASP.NET Sidebar</title>
+ <title>Trang quản trị</title>
  <!-- Bootstrap Core CSS -->
  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
  <!-- Custom CSS -->
