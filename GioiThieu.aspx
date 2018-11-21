@@ -168,7 +168,7 @@
 					<!-- /title -->
 					<div class="row">
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a class="link-img-hover1" href="#"><img src="images/custom/team-img-01.jpg" class="img-responsive-block" alt=""></a>							
+							<a class="link-img-hover1" href="#"><img src="Anh/duong.jpg" class="img-responsive-block" alt=""></a>							
 							<div class="divider divider--md1"></div>
 							<p>
 								<a class="hover-effect-01" href="#">
@@ -179,7 +179,7 @@
 							<p>Nguyên phó tổng giám đốc công ty mỹ phẩm hoa màu Bảo Châu</p>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a class="link-img-hover1" href="#"><img src="images/custom/team-img-02.jpg" class="img-responsive-block" alt=""></a>
+							<a class="link-img-hover1" href="#"><img src="Anh/ha2.jpg"" class="img-responsive-block" alt=""></a>
 							<div class="divider divider--md1"></div>
 							<p>
 								<a class="hover-effect-01" href="#">
@@ -191,7 +191,7 @@
 						</div>
 						<div class="divider divider--lg visible-sm visible-xs"></div>
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a class="link-img-hover1" href="#"><img src="images/custom/team-img-03.jpg" class="img-responsive-block" alt=""></a>
+							<a class="link-img-hover1" href="#"><img img src="Anh/thai.jpg" class="img-responsive-block" alt=""></a>
 							<div class="divider divider--md1"></div>
 							<p>
 								<a class="hover-effect-01" href="#">
@@ -202,7 +202,7 @@
 							<p>Có kinh nghiệm nhiều năm quản lý nhiều công ty</p>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-6">
-							<a class="link-img-hover1" href="#"><img src="images/custom/team-img-04.jpg" class="img-responsive-block" alt=""></a>
+							<a class="link-img-hover1" href="#"><img src="Anh/hoang.jpg" class="img-responsive-block" alt=""></a>
 							<div class="divider divider--md1"></div>
 							<p>
 								<a class="hover-effect-01" href="#">
@@ -227,7 +227,7 @@
 								<div class="slider-blog__item">
 									<div class="row">
 										<div class="col-xs-12 col-sm-2 col-sm-offset-3 box-foto">
-											<img src="images/custom/slider-blog-img01.jpg" alt="">
+											<img src="Anh/son2.jpg" alt="">
 										</div>
 										<div class="col-xs-12 col-sm-5 col-xl-4 box-data">
 											<h6>Ứng Hồng Sơn  <em>&nbsp;-&nbsp;  Công nhân</em></h6>
@@ -244,7 +244,7 @@
 								<div class="slider-blog__item">
 									<div class="row">
 										<div class="col-xs-12 col-sm-2 col-sm-offset-3 box-foto">
-											<img src="images/custom/slider-blog-img02.jpg" alt="">
+											<img src="Anh/son.jpg" alt="">
 										</div>
 										<div class="col-xs-12 col-sm-5 box-data">
 											<h6>Sơn  <em>&nbsp;-&nbsp;  Công nhân</em></h6>

@@ -344,7 +344,6 @@
 									<h4 class="text-left  title-under  mobile-collapse__title">Tài Khoản</h4>
 									<div class="v-links-list mobile-collapse__content">
 										<ul>
-											<li><a href="Login.aspx">Đăng Kí</a></li>
 											<li><a href="shopping_cart.html">Xem Giỏ Hàng</a></li>
 										</ul>
 									</div>
@@ -376,7 +375,7 @@
 			<!-- footer-copyright -->
 			<div class="container footer-copyright">
 				<div class="row">
-					<div class="col-lg-12"> <a href="index.html"><span>Lã Thái</span>Store</a> &copy; 2018 . All Rights Reserved. </div>
+					<div class="col-lg-12"> <a href="index.html"><span>Lã Thái</span>Store</a> &copy;  </div>
 				</div>
 			</div>
 			<!-- /footer-copyright --> 
