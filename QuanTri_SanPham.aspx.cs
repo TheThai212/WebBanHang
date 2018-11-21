@@ -216,4 +216,15 @@ public partial class QuanTri_SanPham : System.Web.UI.Page
                 e.Row.BackColor = System.Drawing.Color.LightGreen;
         }
     }
+    protected void btn_huy_Click(object sender, EventArgs e)
+    {
+        txt_masp.Text = "";
+        txt_tensp.Text = "";
+        txt_motasp.Text = "";
+        txt_gia.Text = "";
+        txt_tinhtrang.Text = "";
+        txt_madm.Text = "";
+        string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+        filename = "";
+    }
 }
