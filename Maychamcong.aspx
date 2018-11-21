@@ -29,60 +29,51 @@
                                 <ItemTemplate>
                                     <!-- product -->
                                     <div class="product product--zoom">
-                                        <div class="product__inside">
-                                            <!-- product image -->
-                                            <div class="product__inside__image">
-                                                <a href="product.html">
-                                                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("hinhanhsp") %> ' />
-                                                </a>
-                                                &nbsp;&nbsp;&nbsp;<!-- quick-view --><a href="#" data-toggle="modal" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span>Quick view</b> </a>
-                                                <!-- /quick-view -->
-                                            </div>
-                                            <!-- /product image -->
-                                            <!-- product name -->
-                                            <div class="product__inside__name">
-                                                <h2><a href="product.html">
-                                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("tensp") %>'></asp:Label>
-                                                </a></h2>
-                                            </div>
-                                            <!-- /product name -->
-                                            <!-- product description -->
-                                            <!-- visible only in row-view mode -->
-                                            <div class="product__inside__description row-mode-visible">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
-                                            <!-- /product description -->
-                                            <!-- product price -->
-                                            <div class="product__inside__price price-box">
-                                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("giasp") %>'></asp:Label>
-                                            </div>
-                                            <!-- /product price -->
-                                            <!-- product review -->
-                                            <!-- visible only in row-view mode -->
-                                            <div class="product__inside__review row-mode-visible">
-                                                <div class="rating row-mode-visible"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star empty-star"></span></div>
-                                                <a href="#">1 Review(s)</a> <a href="#">Add Your Review</a>
-                                            </div>
-                                            <!-- /product review -->
-                                            <div class="product__inside__hover">
-                                                <!-- product info -->
-                                                <div class="product__inside__info">
-                                                    <div class="product__inside__info__btns">
-                                                        <a href="#" class="btn btn--ys btn--xl"><span class="icon icon-shopping_basket"></span>Add to cart</a>
-                                                        <a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-favorite_border"></span></a>
-                                                        <a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-sort"></span></a>
-                                                        <a href="#" data-toggle="modal" data-target="#quickViewModal" class="btn btn--ys btn--xl  row-mode-visible hidden-xs"><span class="icon icon-visibility"></span>Quick view</a>
-                                                    </div>
-                                                    <ul class="product__inside__info__link hidden-sm">
-                                                        <li class="text-right"><span class="icon icon-favorite_border  tooltip-link"></span><a href="#"><span class="text">Add to wishlist</span></a></li>
-                                                        <li class="text-left"><span class="icon icon-sort  tooltip-link"></span><a href="#" class="compare-link"><span class="text">Add to compare</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /product info -->
-                                                <!-- product rating -->
-                                                <div class="rating row-mode-hide"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star empty-star"></span></div>
-                                                <!-- /product rating -->
-                                            </div>
-                                        </div>
-                                    </div>
+										<div class="product__inside">
+											<!-- product image -->
+											<div class="product__inside__image">
+												<a href="product.html"> <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("hinhanhsp") %>' /> </a> 
+												<!-- quick-view --> 
+												<a href="#" data-toggle="modal" data-id="<%# Eval("masp") %>" data-target="#quickViewModal" class="quick-view"><b><span class="icon icon-visibility"></span> Quick view</b> </a> 
+												<!-- /quick-view --> 
+											</div>
+											<!-- /product image --> 
+											<!-- product name -->
+											<div class="product__inside__name">
+												<h2><a href="product.html"> <asp:Label ID="Label1" runat="server" Text='<%# Eval("tensp") %>'></asp:Label> </a></h2>
+											</div>
+											<!-- /product name -->                 <!-- product description --> 
+											<!-- visible only in row-view mode -->
+											<div class="product__inside__description row-mode-visible"> <asp:Label ID="Label2" runat="server" Text='<%# Eval("motasp") %>'></asp:Label>  </div>
+											<!-- /product description -->                 <!-- product price -->
+											<div class="product__inside__price price-box"> <asp:Label ID="Label3" runat="server" Text='<%# Eval("giasp") %>'></asp:Label> </div>
+											<!-- /product price --> 
+											<!-- product review --> 
+											<!-- visible only in row-view mode -->
+											<div class="product__inside__review row-mode-visible">
+												<div class="rating row-mode-visible"> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star empty-star"></span> </div>
+												<a href="#">1 Review(s)</a> <a href="#">Add Your Review</a> 
+											</div>
+											<!-- /product review --> 
+											<div class="product__inside__hover">
+												<!-- product info -->
+												<div class="product__inside__info">
+													<div class="product__inside__info__btns"> <a href="#" class="btn btn--ys btn--xl"><span class="icon icon-shopping_basket"></span> Add to cart</a>
+													<a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-favorite_border"></span></a>
+													<a href="#" class="btn btn--ys btn--xl visible-xs"><span class="icon icon-sort"></span></a>
+													<a href="#" class="btn btn--ys btn--xl  row-mode-visible hidden-xs"><span class="icon icon-visibility"></span> Quick view</a> </div>
+													<ul class="product__inside__info__link hidden-xs">
+														<li class="text-right"><span class="icon icon-favorite_border  tooltip-link"></span><a href="#"><span class="text">Add to wishlist</span></a></li>
+														<li class="text-left"><span class="icon icon-sort  tooltip-link"></span><a href="#" class="compare-link"><span class="text">Add to compare</span></a></li>
+													</ul>
+												</div>
+												<!-- /product info --> 
+												<!-- product rating -->
+												<div class="rating row-mode-hide"> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star"></span> <span class="icon-star empty-star"></span> </div>
+												<!-- /product rating --> 
+											</div>
+										</div>
+									</div>
                                     <!-- /product -->
 
                                 </ItemTemplate>

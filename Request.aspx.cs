@@ -10,6 +10,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections;
+using System.Web.SessionState;
+
 
 public partial class Request : System.Web.UI.Page
 {
@@ -47,39 +49,8 @@ public partial class Request : System.Web.UI.Page
                 return serializer.Serialize(rows);
             }
         }
-        //SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-
-        //ArrayList valuesList = new ArrayList();
-
-
-        //connection.Open();
-        ////Read from the database
-        //SqlCommand command = new SqlCommand("SELECT * FROM sanpham WHERE masp="+id, connection);
-
-        //SqlDataReader dataReader = command.ExecuteReader();
-
-        //while (dataReader.Read())
-        //{
-        //    valuesList.Add(Convert.ToInt32(dataReader[0].ToString()));
-        //}
-        //connection.Close();
-        //PrintValues(myAL);
-        //return valuesList;
+        
     }
 
-    //public static string GetData(int id)
-    //{
-    //    int test = 09090990;
-    //    string sql = "select * from sanpham where masp='" + id +"'";
-    //    DataTable DATA = new DataTable();
-    //    SqlDataAdapter DTA = new SqlDataAdapter(sql, cnnx);
-    //    DTA.Fill(DATA);
-    //    if(DATA.Rows.Count > 0)
-    //    {
-    //         return DATA.Rows[0].ItemArray[0].ToString();
-    //        //return test;
 
-    //    }
-    //    return "";
-    //}
 }
