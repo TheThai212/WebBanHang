@@ -99,7 +99,7 @@ public partial class Request : System.Web.UI.Page
                 {
                     if (dr["masp"].ToString() == SesId)
                     {
-                        dr["quantity"] = int.Parse(dr["quantity"].ToString()) + SesQuantity;
+                        dr["quantity"] = int.Parse(dr["quantity"].ToString()) + soluong;
                         isExited = true;
                         break;
                     }
@@ -118,7 +118,7 @@ public partial class Request : System.Web.UI.Page
 
                 }
 
-                Session["cart"] = cart;
+                Session["GioHang"] = cart;
             }
 
         }

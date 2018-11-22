@@ -344,9 +344,9 @@
 														
 													</ul>
 													<div class="cart__bottom">
-														<div class="cart__total">Tổng: <span> 100000</span></div>
-														<button class="btn btn--ys btn-checkout" onclick="btnshowSession">Thanh Toán <span class="icon icon--flippedX icon-reply"></span></button>
-														<a href="#" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Xem Giỏ Hàng</a>
+														<div class="cart__total">Tổng: <span> 100000 </span></div>
+														<button class="btn btn--ys btn-checkout" >Thanh Toán <span class="icon icon--flippedX icon-reply"></span></button>
+														<a href="" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Xem Giỏ Hàng</a>
 													</div>
 												</div>
 											</div>
