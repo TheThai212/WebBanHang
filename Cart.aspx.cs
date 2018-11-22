@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services;
+using System.Web.Script.Services;
 using System.Web.SessionState;
 
 
@@ -13,9 +15,14 @@ public partial class Cart : System.Web.UI.Page
     {
 
     }
-    public static string add2Cart( string id)
+
+    [WebMethod]
+    [ScriptMethod(UseHttpGet = true)]
+    public void add2Cart(string id, string price, string quantity)
     {
 
-        return "";
+        Session["Name"] = "allooo";
+
+        Response.Write(Session);
     }
 }
