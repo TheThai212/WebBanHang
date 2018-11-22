@@ -21,13 +21,21 @@
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [sanpham]"></asp:SqlDataSource>
         
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="masp" ForeColor="Black" Width="893px" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit1" OnRowDataBound="GridView1_RowDataBound" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSorting="GridView1_Sorting" CssClass="auto-style3">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="masp" Width="893px" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit1" OnRowDataBound="GridView1_RowDataBound" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnSorting="GridView1_Sorting" GridLines="Vertical" HorizontalAlign="Center" Height="48%" PageSize="3">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
                 <asp:BoundField DataField="masp" HeaderText="masp" ReadOnly="True" SortExpression="masp" />
                 <asp:BoundField DataField="tensp" HeaderText="tensp" SortExpression="tensp" />
                 <asp:BoundField DataField="motasp" HeaderText="motasp" SortExpression="motasp" />
                 <asp:BoundField DataField="giasp" HeaderText="giasp" SortExpression="giasp" />
-                <asp:BoundField DataField="hinhanhsp" HeaderText="hinhanhsp" SortExpression="hinhanhsp" />
+                <asp:TemplateField HeaderText="Image" SortExpression="hinhanhsp" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="NotSet">
+                    <ItemTemplate>
+                        <asp:Image ID="Image2" runat="server" Width="150px" Height="150px"
+                            ImageUrl='<%# Eval("hinhanhsp")%>' />
+                    </ItemTemplate>
+
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:TemplateField>
                 <asp:BoundField DataField="tinhtrang" HeaderText="tinhtrang" SortExpression="tinhtrang" />
                 <asp:BoundField DataField="madm" HeaderText="madm" SortExpression="madm" />
                 <asp:TemplateField ShowHeader="False">
@@ -49,18 +57,18 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-            <FooterStyle BackColor="#CCCCCC" />
-            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-            <RowStyle BackColor="White" />
-            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
             <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#383838" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
         </asp:GridView>
         
-        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" CssClass="auto-style3" />
+        <%--<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" CssClass="auto-style3" />--%>
         
         <br />
         

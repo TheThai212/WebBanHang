@@ -513,7 +513,6 @@
 		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
 		        <h4 class="modal-title text-center text-uppercase">Login form</h4>
 		      </div>
-		      <%--<form runat="server">--%>
 			      <div class="modal-body indent-bot-none">
 			      	<div class="form-group">
 			      		<div class="input-group">
@@ -521,14 +520,14 @@
 						    	<span class="icon icon-person"></span>
 						    </span>
                                <asp:TextBox ID="LoginFormName" name="LoginFormName" class="form-control" placeholder="Name:" runat="server"></asp:TextBox>
-						    <%--<input type="text" id="LoginFormName" class="form-control" placeholder="Name:">--%>
+						    
 						</div>
 			      	</div>
 					<div class="form-group">
 						<div class="input-group">
 						    <span class="input-group-addon">@</span>
                             <asp:TextBox ID="LoginFormPass" runat="server" name="LoginFormPass" class="form-control" placeholder="Password:" TextMode="Password"></asp:TextBox>
-						    <%--<input type="password" id="LoginFormPass" class="form-control" placeholder="Password:">--%>
+						    
 						</div>
 					</div>			         				    				     
  	                 <div class="checkbox-group">
@@ -540,7 +539,7 @@
 	                  </label>
 	                </div>
                       <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn--ys btn--full btn--lg" OnClick="btnLogin_Click"/>
-	                <%--<button type="button" class="btn btn--ys btn--full btn--lg">Login</button>--%>
+	                
 			        <div class="divider divider--xs"></div>
 			        <button type="button" class="btn btn--ys btn--full btn--lg btn-blue"><span class="fa fa-facebook"></span> Login with Facebook</button>
 			        <div class="divider divider--xs"></div>
@@ -552,8 +551,6 @@
 			        	<li><a href="#">Create an account</a></li>
 			        </ul>
 			      </div>	
-                  <%--</form>--%>		      
-			 
 		    </div>
 		  </div>
 		</div>	

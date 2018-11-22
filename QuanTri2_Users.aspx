@@ -75,7 +75,7 @@
 
         </asp:GridView>
 
-        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" CssClass="auto-style6" />
+        <%--<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" CssClass="auto-style6" />--%>
 
         <br />
         
