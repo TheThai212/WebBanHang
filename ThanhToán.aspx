@@ -62,6 +62,12 @@
                                         <label for="checkoutFormFirstName">Họ Tên <sup>*</sup></label>
                                         <input type="text" class="form-control" id="checkoutFormFirstName">
                                     </div>
+                                    </div>
+                                  <div class="col-md-12 col-lg-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="checkoutFormFirstName">Số Điện Thoại <sup>*</sup></label>
+                                        <input type="text" class="form-control" id="checkoutFormSDT">
+                                    </div>
 
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-xl-6">
@@ -70,6 +76,8 @@
                                         <label for="checkoutFormLastName">Năm Sinh  <sup>*</sup></label>
                                         <input type="text" class="form-control" id="checkoutFormLastName">
                                     </div>
+                                    
+                                
                                     <div class="form-group">
                                         <label for="checkoutFormEmailAddress">Email  <sup>*</sup></label>
                                         <input type="email" class="form-control" id="checkoutFormEmailAddress">
