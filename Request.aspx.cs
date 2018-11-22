@@ -53,4 +53,14 @@ public partial class Request : System.Web.UI.Page
     }
 
 
+    [WebMethod]
+    [ScriptMethod(UseHttpGet = true)]
+    public static string addToCart(string id, string price, string quantity)
+
+    {
+        string cart = "{"+'"'+"masp"+'"'+":"+id+ "," + '"' + "giasp" + '"' + ":" + price + "," + '"' + "quantity" + '"' + ":" + quantity + "}";
+        return cart;
+    }
+
+
 }
