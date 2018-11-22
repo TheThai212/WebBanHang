@@ -191,7 +191,7 @@
 							<div class="product-listing carousel-products-mobile row">
 								
 									<!-- /product --> 
-								</div>--%>
+								</div>
                                 <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
                                     <ItemStyle CssClass="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" />
                                     <ItemTemplate>

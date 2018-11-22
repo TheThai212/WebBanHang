@@ -32,4 +32,11 @@ public partial class Site : System.Web.UI.MasterPage
         Response.Redirect("Process.aspx");
         conn.Close();
     }
+
+
+    protected void btnshowSession(object sender, EventArgs e)
+    {
+        Response.Write(Session["cart"]);
+    }
+
 }

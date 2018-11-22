@@ -39,7 +39,7 @@
             $(".quick-view").click(function (e) {
                 e.preventDefault(); 
 
-                //alert("Handler for .123456() called.");
+                //alert("Handler for .1234567() called.");
                 var id = $(this).attr('data-id');
                 $.ajax({
                     type: "GET",
@@ -107,6 +107,31 @@
                     }
                 });
 
+                //$.ajax({
+                //    type: "GET",
+                //    url: "Request.aspx/add2Session",
+                //    data: { id: id, price: price, quantity:quantity},
+                //    contentType: "application/json; charset=utf-8",
+                //    dataType: "json",
+                //    success: function (res) {
+                //        console.log('sessionIsOk');
+
+                //    },
+                //    failure: function (response) {
+                //        alert(response.d);
+                //    }
+                //});
+                //$.ajax({
+                //   type : "POST",
+                //   url : "Request.aspx/SendDataVoid",
+                //   contentType : "application/json; charset=utf-8",
+                //   data : { id: id, price: price, quantity:quantity},
+                //   datatype : "json",
+                //}).done(function (data) {
+                //    alert('success');
+                //}).fail(function (jqXHR, textStatus, errorThrown) {
+                //   alert(jqXHR.getResponseHeader("error"));
+                //});
             });
         });
         
@@ -320,7 +345,8 @@
 													</ul>
 													<div class="cart__bottom">
 														<div class="cart__total">Tổng: <span> 100000</span></div>
-														<a href="http://localhost:51835/ThanhToán" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Thanh Toán</a>
+														<button class="btn btn--ys btn-checkout" onclick="btnshowSession">Thanh Toán <span class="icon icon--flippedX icon-reply"></span></button>
+														<a href="#" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Xem Giỏ Hàng</a>
 													</div>
 												</div>
 											</div>
