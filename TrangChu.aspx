@@ -93,7 +93,6 @@
                                 <source src='images/slides/video/explore.ogv' type='video/ogg' />
                             </video>--%>
             </div>
-            --%>
                         <!-- TEXT -->
             <%--<div class="tp-caption lfb stb"
                             data-x="center"
@@ -114,9 +113,6 @@
 
                     </li>
                     <!-- /SLIDE - 3 -->
-
-
-
             </ul>
         </div>
     </div>
@@ -188,10 +184,12 @@
 								<h2 class="text-center text-uppercase title-under">FEATURED PRODUCTS</h2>
 							</div>
 							<!-- /title -->
+
 							<div class="product-listing carousel-products-mobile row">
 								
 									<!-- /product --> 
 								</div>
+
                                 <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
                                     <ItemStyle CssClass="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-3" />
                                     <ItemTemplate>
@@ -214,7 +212,8 @@
 											<!-- visible only in row-view mode -->
 											<div class="product__inside__description row-mode-visible"> <asp:Label ID="Label2" runat="server" Text='<%# Eval("motasp") %>'></asp:Label>  </div>
 											<!-- /product description -->                 <!-- product price -->
-											<div class="product__inside__price price-box"> <asp:Label ID="Label3" runat="server" Text='<%# Eval("giasp") %>'></asp:Label> </div>
+                                            
+											<div class="product__inside__price price-box"> <asp:Label ID="Label3" runat="server" Text='<%# Eval("giasp")%>'></asp:Label></div>
 											<!-- /product price --> 
 											<!-- product review --> 
 											<!-- visible only in row-view mode -->

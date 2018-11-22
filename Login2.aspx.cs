@@ -27,7 +27,7 @@ public partial class Login2 : System.Web.UI.Page
             (cmd.ExecuteScalar().ToString() == "1")
         {
             Session["Name"] = LoginFormName.Text;
-            Response.Redirect("QuanTri_TrangChu.aspx");
+            Response.Redirect("QuanTri2_TrangChu.aspx");
         }
         else
         {
