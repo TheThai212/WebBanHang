@@ -59,28 +59,38 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-6">
                                     <div class="form-group">
-                                        <label for="checkoutFormFirstName">Họ Tên <sup>*</sup></label>
-                                        <input type="text" class="form-control" id="checkoutFormFirstName">
+                                        <label for="inputName">Họ Tên<sup>*</sup></label>
+                                        <asp:TextBox ID="inputName" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn chưa điền tên" ControlToValidate="inputName" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+
                                     </div>
                                     </div>
                                   <div class="col-md-12 col-lg-12 col-xl-6">
                                     <div class="form-group">
-                                        <label for="checkoutFormFirstName">Số Điện Thoại <sup>*</sup></label>
-                                        <input type="text" class="form-control" id="checkoutFormSDT">
+                                        <label for="inputSDT">Số Điện Thoại <sup>*</sup></label>
+                                        <asp:TextBox ID="inputSDT" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn chưa điền Số Điện Thoại" ControlToValidate="inputSDT" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                                     </div>
 
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-xl-6">
                                     <div class="form-group">
                                         <span class="note pull-right">* Required Fields</span>
-                                        <label for="checkoutFormLastName">Năm Sinh  <sup>*</sup></label>
-                                        <input type="text" class="form-control" id="checkoutFormLastName">
+                                        <label for="inputNS">Năm Sinh<sup>*</sup></label>
+                                        <asp:TextBox ID="inputNS" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Bạn chưa điền Năm Sinh" ControlToValidate="inputNS" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                                     </div>
                                     
                                 
                                     <div class="form-group">
-                                        <label for="checkoutFormEmailAddress">Email  <sup>*</sup></label>
-                                        <input type="email" class="form-control" id="checkoutFormEmailAddress">
+                                         <label for="inputEmail">Email <sup>*</sup></label>
+                                        <asp:TextBox ID="inputEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="email" class="form-control" id="inputEmail">--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn chưa điền gmail" ControlToValidate="inputEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Nhập sai Email" ControlToValidate="inputEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +99,10 @@
                                 <label for="checkoutFormAddress11">Địa Chỉ Hiện Tại<sup>*</sup></label>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="checkoutFormAddress22">
+                                <label for="inputDC">Địa Chỉ <sup>*</sup></label>
+                                        <asp:TextBox ID="inputDC" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Bạn chưa điền Địa Chỉ" ControlToValidate="inputDC" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                             </div>
                             <!-- row-col-2 -->
 
@@ -113,30 +126,35 @@
 						<form >
 							<h6 class="color">Nếu bạn nhận hàng trong phạm vi nội thành</h6>
 							<div class="divider--md"></div>
-							<div class="checkbox-group clearfix">
-			                  <input type="checkbox" id="checkBox3">
-			                  <label for="checkBox3"> 
-			                  	<span class="check"></span>
-			                  	<span class="box"></span>
-			                  	Nội Thành
-			                  </label>
-			                </div>							
+							<div class="form-group form-group-top clearfix">
+					     	<label class="radioo">
+	                       		<input id="radio3" type="radio" name="radios2">
+	                        	<span class="outer2">
+	                        		<span class="inner2"></span>
+	                        	</span>
+	                        	Nội Thành
+	                        </label>
+					    </div>						
 						    <h6 class="color">Nếu bạn nhận hàng trong phạm vi ngoại thành</h6>
 						    <div class="divider--md"></div>
-							<div class="checkbox-group clearfix">
-			                  <input type="checkbox" id="checkBox4">
-			                  <label for="checkBox4"> 
-			                  	<span class="check"></span>
-			                  	<span class="box"></span>
-			                  	COD
-			                  </label>
-			                </div>									
+							<div class="form-group form-group-top clearfix">
+					     	<label class="radioo">
+	                       		<input id="radio4" type="radio" name="radios2">
+	                        	<span class="outer2">
+	                        		<span class="inner2"></span>
+	                        	</span>
+	                        	COD
+	                        </label>
+					    </div>								
 						     <p>
 						     	Bạn vui lòng điền địa chỉ nhận hàng
 						     </p>
 						     <div class="form-group">
-							    <label for="checkoutFormFrom">Tới </label>
-							    <input type="text" class="form-control" id="checkoutFormFrom">
+							    <label for="inputDCGH">Tới </label>
+							     <asp:TextBox ID="inputDCGH" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                       <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Bạn chưa điền địa chỉ giao hàng" ControlToValidate="inputDCGH" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+
 							</div>
 							
 							<div class="form-group">
@@ -174,7 +192,10 @@
 					    </div>
 					    <div class="form-group">
 						    <label for="checkoutFormNameOnCard">Tên Chủ Thẻ <sup>*</sup></label>
-						    <input type="text" class="form-control" id="checkoutFormNameOnCard">
+						     <asp:TextBox ID="Tenthe" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                       <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Bạn chưa điền địa chỉ giao hàng" ControlToValidate="Tenthe" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+
 						</div>
 						<div class="form-group">
 						    <label for="checkoutFormCreditCartType">Ngân hàng <sup>*</sup></label>
@@ -186,7 +207,9 @@
 						</div>
 						<div class="form-group">
 						    <label for="checkoutFormCreditCartNumber">Số Thẻ<sup>*</sup></label>
-						    <input type="text" class="form-control" id="checkoutFormCreditCartNumber">
+						    <asp:TextBox ID="SoThe" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <%--<input type="text" class="form-control" id="inputName">--%>
+                                       <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Bạn chưa điền địa chỉ giao hàng" ControlToValidate="SoThe" ForeColor="#FF3300"></asp:RequiredFieldValidator>
 						</div>
 						
 						<!-- /row-col-2 -->
