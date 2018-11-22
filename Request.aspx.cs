@@ -15,9 +15,17 @@ using System.Web.SessionState;
 
 public partial class Request : System.Web.UI.Page
 {
+
+    static DataTable cart = new DataTable();
+
+    public static string SesId = "";
+    public static string SesPrice = "";
+    public static string SesQuantity = "";
+
+
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
     static SqlConnection cnnx = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
     [WebMethod]
@@ -58,9 +66,67 @@ public partial class Request : System.Web.UI.Page
     public static string addToCart(string id, string price, string quantity)
 
     {
+        SesId = id;
+        SesPrice = price;
+        SesQuantity = quantity;
         string cart = "{"+'"'+"masp"+'"'+":"+id+ "," + '"' + "giasp" + '"' + ":" + price + "," + '"' + "quantity" + '"' + ":" + quantity + "}";
         return cart;
     }
 
+    public void add2Session(string SesId, string SesPrice, string SesQuantity)
+    {
 
+        int soluong = int.Parse(SesQuantity);
+        if (!IsPostBack)
+        {
+            if (Session["GioHang"] != null)
+            {
+                cart = Session["GioHang"] as DataTable;
+            }
+            else
+            {
+                cart.Rows.Clear();
+                cart.Columns.Clear();
+                cart.Columns.Add("masp", typeof(int));
+                cart.Columns.Add("gia", typeof(double));
+                cart.Columns.Add("quantity", typeof(int));
+                cart.Columns.Add("TongTien", typeof(double), "soluong * gia");
+
+                bool isExited = false;
+
+                //kiem tra. ton tai thi cong them so luong
+                foreach (DataRow dr in cart.Rows)
+                {
+                    if (dr["masp"].ToString() == SesId)
+                    {
+                        dr["quantity"] = int.Parse(dr["quantity"].ToString()) + SesQuantity;
+                        isExited = true;
+                        break;
+                    }
+                }
+
+
+                if (!isExited)// chua ton tai thi them moi gio hang
+                {
+                    DataRow dr = cart.NewRow();
+
+                    dr["masp"] = SesId;
+                    dr["gia"] = SesPrice;
+                    dr["quantity"] = SesQuantity;
+
+                    cart.Rows.Add(dr);
+
+                }
+
+                Session["cart"] = cart;
+            }
+
+        }
+
+
+    }
+
+
+
+   
 }
