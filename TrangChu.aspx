@@ -93,7 +93,6 @@
                                 <source src='images/slides/video/explore.ogv' type='video/ogg' />
                             </video>--%>
             </div>
-            --%>
                         <!-- TEXT -->
             <%--<div class="tp-caption lfb stb"
                             data-x="center"
@@ -114,9 +113,6 @@
 
                     </li>
                     <!-- /SLIDE - 3 -->
-
-
-
             </ul>
         </div>
     </div>
