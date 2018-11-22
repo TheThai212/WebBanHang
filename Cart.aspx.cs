@@ -13,16 +13,9 @@ public partial class Cart : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
-    }
-
-    [WebMethod]
-    [ScriptMethod(UseHttpGet = true)]
-    public void add2Cart(string id, string price, string quantity)
-    {
-
-        Session["Name"] = "allooo";
-
         Response.Write(Session);
     }
+
+  
+    
 }
