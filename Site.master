@@ -320,7 +320,7 @@
 													</ul>
 													<div class="cart__bottom">
 														<div class="cart__total">Tổng: <span> 100000</span></div>
-														<a href="http://localhost:51835/ThanhToán" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Thanh Toán</a>
+														<a href="Thanhtoan.aspx" class="btn btn--ys"><span class="icon icon-shopping_basket"></span> Thanh Toán</a>
 													</div>
 												</div>
 											</div>
