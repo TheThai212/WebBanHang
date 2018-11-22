@@ -206,7 +206,8 @@
 											<!-- visible only in row-view mode -->
 											<div class="product__inside__description row-mode-visible"> <asp:Label ID="Label2" runat="server" Text='<%# Eval("motasp") %>'></asp:Label>  </div>
 											<!-- /product description -->                 <!-- product price -->
-											<div class="product__inside__price price-box"> <asp:Label ID="Label3" runat="server" Text='<%# Eval("giasp") %>'></asp:Label> </div>
+                                            
+											<div class="product__inside__price price-box"> <asp:Label ID="Label3" runat="server" Text='<%# Eval("giasp")%>'></asp:Label></div>
 											<!-- /product price --> 
 											<!-- product review --> 
 											<!-- visible only in row-view mode -->

@@ -54,13 +54,13 @@
 					</div>
 					<div class="col-md-9  col-sm-12">
 						<div class="divider divider--lg visible-xs"></div>
-						<h2 class="text-uppercase title-bottom">GET IN TOUCH WITH US</h2>
+						<h2 class="text-uppercase title-bottom">ĐÓNG GÓP Ý KIẾN VỚI CHÚNG TÔI</h2>
                         <div class="contact-form">
                             <!-- input -->
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="inputName">Name <sup>*</sup></label>
+                                        <label for="inputName">Họ tên <sup>*</sup></label>
                                         <asp:TextBox ID="inputName" runat="server" CssClass="form-control"></asp:TextBox>
                                         <%--<input type="text" class="form-control" id="inputName">--%>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn chưa điền tên" ControlToValidate="inputName" ForeColor="#FF3300"></asp:RequiredFieldValidator>
@@ -78,10 +78,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="inputPhone">Phone </label>
+                                        <label for="inputPhone">SĐT </label>
                                         <asp:TextBox ID="inputPhone" runat="server" CssClass="form-control"></asp:TextBox>
                                         <%--<input type="text" class="form-control" id="inputPhone">--%>
-                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Nhập sai!" ControlToValidate="inputPhone" ForeColor="Red"></asp:RegularExpressionValidator>
+                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Nhập sai!" ControlToValidate="inputPhone" ForeColor="Red"></asp:RegularExpressionValidator>
                                     </div>
                                 </div>
                             </div>

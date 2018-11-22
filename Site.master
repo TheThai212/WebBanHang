@@ -25,7 +25,11 @@
     <!-- Icon Fonts  -->
     <link rel="stylesheet" href="font/style.css">
     <!-- Head Libs -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="external/bootstrap/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         
        
@@ -35,7 +39,7 @@
             $(".quick-view").click(function (e) {
                 e.preventDefault(); 
 
-                //alert("Handler for .12() called.");
+                //alert("Handler for .123456() called.");
                 var id = $(this).attr('data-id');
                 $.ajax({
                     type: "GET",
@@ -73,21 +77,29 @@
                
 
                 var id = $('#idProduct').text();
+                var name = $('#ProductName').text();
                 var price = $('#price').text();
                 var quantity = $('#quantityProduct').val();
+                namP = name.split(' ').join('_');
+                var idName = id + '_' + name;
 
-                //alert(quantity);
+                $('#quickViewModal').modal('hide');
+                //var image = $('#idImgProduct').attr('src');
+
+                //alert(image);1
                 $.ajax({
                     type: "GET",
-                    url: "Cart.aspx/add2Cart",
-                    data: { id: id, price: price, quantity: quantity },
+                    url: "Request.aspx/addToCart",
+                    data: { id: id, price: price, quantity:quantity},
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (res) {
-                        //var product = JSON.parse(res.d);
+                        var cart = JSON.parse(res.d);
                         console.log(res);
-
+                        console.log(cart);
                         
+                        $('#cart').append('<li class="cart__item"><div class="cart__item__control"><div class="cart__item__delete"><a href="#" class="icon icon-delete"><span>Delete</span></a></div><div class="cart__item__edit"><a href="#" class="icon icon-edit"><span>Edit</span></a></div></div><div class="cart__item__info"><div class="cart__item__info__title"><h2 class="title-center"><a data-id"' + cart.masp + '">Mã sản phẩm:' + cart.masp + '</a></h2></div><div class="cart__item__info__price"><span class="info-label">Price:</span><span>' + cart.giasp + '</span></div><div class="cart__item__info__qty"><span class="info-label">SL:</span><input type="text" class="input--ys" value="' + cart.quantity +'" /></div></div></li>')
+                        toastr.success('Sản phẩm đã được thêm vào giỏ hàng.', 'Success', {timeOut: 2000})
 
                     },
                     failure: function (response) {
@@ -303,21 +315,8 @@
 												<div class="container">
 													<div class="cart__top">Những sản phẩm bạn đã chọn</div>
 													<a href="#" class="icon icon-close cart__close"><span>CLOSE</span></a>
-													<ul>
-														<li class="cart__item">
-															<div class="cart__item__image pull-left"><a href="#"><img src="images/product/product-2.jpg" alt=""/></a></div>
-															<div class="cart__item__control">
-																<div class="cart__item__delete"><a href="#" class="icon icon-delete"><span>Delete</span></a></div>
-																<div class="cart__item__edit"><a href="#" class="icon icon-edit"><span>Edit</span></a></div>
-															</div>
-															<div class="cart__item__info">
-																<div class="cart__item__info__title">
-																	<h2 class="title-center"><a href="#">Quần</a></h2>
-																</div>
-																<div class="cart__item__info__price"><span class="info-label">Price:</span><span>50000</span></div>
-																<div class="cart__item__info__qty"><span class="info-label">SL:</span><input type="text" class="input--ys" value='1' /></div>															
-															</div>
-														</li>
+													<ul id="cart">
+														
 													</ul>
 													<div class="cart__bottom">
 														<div class="cart__total">Tổng: <span> 100000</span></div>
@@ -638,7 +637,7 @@
 		<!-- jQuery 1.10.1--> 
 		<script src="external/jquery/jquery-2.1.4.min.js"></script> 
 		<!-- Bootstrap 3--> 
-		<script src="external/bootstrap/bootstrap.min.js"></script> 
+		
 		<!-- Specific Page External Plugins --> 
 		<script src="external/slick/slick.min.js"></script>
 		<script src="external/bootstrap-select/bootstrap-select.min.js"></script>  
